@@ -1,14 +1,16 @@
 ---
 layout:     post
-title:      "ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？「译」"
-subtitle:   "ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?"
-date:       2015-09-22
+title:      "React vs Angular 2：冰与火之歌「译」"
+subtitle:   "React versus Angular 2: There Will Be Blood"
+date:       2016-02-01 12:00:00
 author:     "Hux"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post-bg-re-vs-ng2.jpg"
+header-mask: 0.3
+catalog:    true
 tags:
     - 前端开发
     - JavaScript
-    - 翻译
+    - 译文
 ---
 
 
@@ -25,7 +27,7 @@ JavaScript 有着很奇怪的命名史。
 
 
 > 术语（译者注）：
-> 
+>
 > * *标准（Standard）*： 用于定义与其他事物区别的一套规则
 > * *实现（Implementation）*： 某个标准的具体实施/真实实践
 
@@ -51,7 +53,7 @@ JavaScript 有着很奇怪的命名史。
 
 #### 一些资源
 
-  
+
 
 * TC39 的 [Github 仓库](https://github.com/tc39/ecma262)上可以看到所有目前公开的提案
 * 如果你还不熟悉 ES6，Babel 有一个[很不错的特性概览](https://babeljs.io/docs/learn-es2015/)
@@ -64,4 +66,3 @@ JavaScript 有着很奇怪的命名史。
 
 本文译自 [ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)   
 译者 [黄玄](http://weibo.com/huxpro)，首次发布于 [Hux Blog](http://huangxuan.me)，转载请保留以上链接
-
