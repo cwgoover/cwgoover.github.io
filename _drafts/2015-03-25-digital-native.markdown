@@ -7,7 +7,6 @@ author:     "Hux"
 header-img: "img/post-bg-digital-native.jpg"
 catalog: true
 tags:
-    - hUX 随想录
     - 职业病
     - 交互设计
 ---

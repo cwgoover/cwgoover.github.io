@@ -10,7 +10,6 @@ catalog:    true
 tags:
     - 前端开发
     - JavaScript
-    - 译文
 ---
 
 

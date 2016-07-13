@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Introduction Input of Pointer Location"
-subtitle:   "Pointer Location Settings Analytics"
+title:      "Introduction Android Input of Pointer Location"
+subtitle:   "Android Pointer Location Settings Analytics"
 date:       2016-05-31
 author:     "Vivi CAO"
 header-img: "img/post-bg-miui6.jpg"

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "How to read Beautiful Markdown"
+title:      "How to write Beautiful Markdown"
 date:       2016-07-12
 author:     "Vivi CAO"
 header-img: "img/post-bg-miui6.jpg"
@@ -26,3 +26,7 @@ It will be jump here!
 ## 分类
 
 分类可以用“*”，也可以用“-”
+
+## 空行
+
+可以使用“<br>”作为空行操作

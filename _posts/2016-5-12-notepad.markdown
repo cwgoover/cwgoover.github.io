@@ -1,0 +1,64 @@
+---
+layout:     post
+title:      "Memo List"
+subtitle:   "Keep all my important notes"
+date:       2016-05-12
+author:     "Vivi CAO"
+header-img: "img/post-bg-notepad.jpg"
+tags:
+    - Android
+    - Java
+    - Blog
+---
+
+## Interview Materials
+* [Android Performance Case: ](http://blog.csdn.net/qq435757399/article/details/42963845)关于graphic讲解的比较仔细，值得借鉴
+
+<br>
+
+## What are must-read Android developer blogs?
+
+* [Quora QA: ](https://www.quora.com/What-are-must-read-Android-developer-blogs)关于此问题的提问
+* [Android Developers Blog (Offical): ](http://android-developers.blogspot.hk)官方博客，经典
+* [Android UI Patterns: ](http://www.androiduipatterns.com/)
+* [Cyril Mottier: ](http://cyrilmottier.com/)
+* [#androiduiux: ](https://androiduiux.com/)
+* [Google Developers Blog: ](https://developers.googleblog.com/)
+
+<br>
+
+## Blog Materials
+
+* [Color Psychology: ](https://www.verywell.com/color-psychology-2795824)
+
+#### High-resolution photos for blog
+
+* [15个优秀的免费高清图片素材网站: ](http://www.shejidaren.com/free-photos.html)
+* [Gratisography: ](http://www.gratisography.com/)
+* [unsplash: ](https://unsplash.com/)
+* [Google Developers Blog: ](https://developers.googleblog.com/)
+
+<br>
+
+## Github
+
+* [玩转 Github 徽章: ](http://www.imooc.com/article/2319)
+
+<br>
+
+## Python
+
+* [awesome-python: ](https://github.com/vinta/awesome-python#ides)
+
+<br>
+
+## Linux
+
+* [linux command tutorial: ](http://linuxcommand.org/)官方资料，经典
+* [grep command: ](http://linuxcommand.org/man_pages/grep1.html)
+
+<br>
+
+## Regex
+
+* [正则表达式30分钟入门教程: ](http://deerchao.net/tutorials/regex/regex.htm)
