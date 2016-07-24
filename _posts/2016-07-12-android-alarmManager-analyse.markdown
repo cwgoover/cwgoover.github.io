@@ -4,7 +4,7 @@ title:      "Android AlarmManager Workflow"
 subtitle:   "Describe the detail implement of the AlarmManagerService"
 date:       2016-07-12
 author:     "Vivi Cao"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post-bg-alarm-basic.png"
 header-mask: 0.3
 catalog:    true
 tags:
@@ -132,8 +132,8 @@ alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
 ```
 
 
-
 ---
+
 ## Alarm Manager
 
 这一章主要介绍Alarm Manager中的关键属性和接口为后续深入分析AlarmManagerService做准备。涉及到的属性值有Alarm 的Type、Flag和Window，其中Alarm Type是唯一面向用户的属性（用户可见）前一章已经给出详细的说明，这里只有标记说明。而涉及到的接口如下所示：
@@ -282,8 +282,8 @@ public void setAndAllowWhileIdle(int type, long triggerAtMillis, PendingIntent o
 如果是系统控件并且workSource为空，AlarmManagerService中会给该alarm加入**FLAG_ALLOW_WHITE_IDLE_UNRESTRICTED** flag.
 
 
-
 ---
+
 ## AlarmManagerService Workflow
 
 #### Set an Alarm (Top 2 Bottom)
