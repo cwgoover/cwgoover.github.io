@@ -12,14 +12,6 @@ tags:
     - Java
 ---
 
-> **如何将两个图片并列显示**
-
-> **如何链接标号**
-
-> **如何缩小列举行的下面间距**
-
-> **设置字体样式，颜色？？**
-
 ## 启动流程
 
 当用户点击`“Pointer Location”`按钮后，系统会在所有窗口之上创建一个顶端view：PointerLocationView，该view就是我们看到显示touch运动轨迹的图层.
@@ -32,6 +24,7 @@ tags:
 
 <img src="/img/in-post/post-android-pointer-location/Pointer_Location.png" width="1000" />
 
+---
 
 ## Pointer Location显示
 
@@ -312,6 +305,8 @@ if (drawn) {
 <img src="/img/in-post/post-android-pointer-location/view_path_4_1.png" width="260" />
 <img src="/img/in-post/post-android-pointer-location/view_path_4_2.png" width="260" />
 
+---
+
 ## PointerLocationView类分析
 
 #### 类继承和实现关系
@@ -495,6 +490,8 @@ if (action == MotionEvent.ACTION_DOWN) {
 
 <img src="/img/in-post/post-android-pointer-location/systrace_1.png" width="800" />
 <img src="/img/in-post/post-android-pointer-location/systrace_2.png" width="800" />
+
+---
 
 ## 经典代码片段
 
