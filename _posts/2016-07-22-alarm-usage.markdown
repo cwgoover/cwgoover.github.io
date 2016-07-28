@@ -10,6 +10,10 @@ tags:
     - Alarm
 ---
 
+> 本文系本作者原创，如有任何知识产权、版权问题或理论错误，还请指正。
+> 转载请注明原作者及出处，谢谢配合。
+<br>
+
 # 序言
 
 这一篇基于前一篇["Android AlarmManager Workflow"](https://cwgoover.github.io/2016/07/12/android-alarmManager-analyse/)的基础上继续深入解释如何分析AlarmManagerService的问题，主要从android log，dumpsys info和一些知识点的记录着手，力求全面分析该类的知识点。

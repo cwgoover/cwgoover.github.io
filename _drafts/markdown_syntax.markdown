@@ -96,13 +96,80 @@ Since the contents of a blockquote are block-level elements, you can nest blockq
   ~~~~~~~~
   ~~~~~~~~~~~~~~~~~~
 
+  ↓↓↓↓
 
+  ↑↑↑↑
+
+
+
+Hux 的 Blog 就这么开通了。
+
+[跳过废话，直接看技术实现 ](#build)
+
+
+* **Android **
+	* 思考 —— 从
+	* 载体 —— 纸
+	* 世界 —— 界
+
+* **iOS **
+	- 思考 —— 朋克
+	- 载体 —— 远
+	- 世界 —— 宙
+
+
+<p id = "build"></p>
+---
+
+
+### Catalog
+
+- WHAT is Progressive Web App?
+- 1 - Installability
+- 2 - App Shell
+- 3 - Offline
+    - SERVICE WORKER!
+- 4 - Re-engageable
+    - Push Notification
+- CONS in my pov
+- PROS in my pov
+- Why Web?   
+
+
+
+
+<iframe src="http://huangxuan.me/forcify/" style="
+    width:100%;
+    height:500px;
+    border: 0;
+"></iframe>
+
+
+{% raw %}
+
+```hbs
+{{myVar}}        //单向数据绑定
+ngModel="myVar"  //双向数据绑定
+```
+
+{% endraw %}
+
+
+XNU, the acronym(首字母缩写) for ***X is Not Unix***, which is the **Computer OS Kernel** developed at Apple Inc since Dec 1996 for use in the Mac OS X and released as free open source software as part of Darwin.
 
 
 ### [Watch Slides → ](http://yanshuo.io/assets/player/?deck=5753088f79bc440063aa84f0#/)
 
 ## 如何定义插入图片的大小：
 <img src="http://huangxuan.me/pwa-in-my-pov/attach/qrcode.png" width="350" />
+
+<img src="http://www.mobilexweb.com/wp-content/uploads/2015/09/back.png" alt="backbutton" width="320" />
+
+<img src="http://www.mobilexweb.com/wp-content/uploads/2015/09/IMG_2017.png" alt="input file" width="320" />
+
+<img src="http://huangxuan.me/js-module-7day/attach/qrcode.png" width="350" height="350"/>
+
+<small class="img-hint">你也可以通过扫描二维码在手机上观看</small>
 
 ### Catalog
 
@@ -116,3 +183,26 @@ Since the contents of a blockquote are block-level elements, you can nest blockq
 - CONS in my pov
 - PROS in my pov
 - Why Web?
+
+
+### References
+
+1.<a id="ref1">[End-to-end - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/End-to-end)</a>
+
+2.<a id="ref2">[end-to-end - definition of end-to-end by The Free Dictionary](http://www.thefreedictionary.com/end-to-end)</a>
+
+
+### 著作权声明
+
+本文译自 [iOS 9, Safari and the Web: 3D Touch, new Responsive Web Design, Native integration and HTML5 APIs --- Breaking the Mobile Web](http://www.mobilexweb.com/blog/ios9-safari-for-web-developers)   
+译者 [黄玄](http://weibo.com/huxpro)，首次发布于 [Hux Blog](http://huangxuan.me)，转载请保留以上链接
+
+
+
+---
+
+*本篇完。*
+
+> 本文作者系前「阿里旅行 · 去啊」前端实习生，本文系业余时间学习之作。
+> 如有任何知识产权、版权问题或理论错误，还请指正。
+> 转载请注明原作者及以上信息。
