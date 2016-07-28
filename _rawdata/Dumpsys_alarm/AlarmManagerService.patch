@@ -1,0 +1,281 @@
+diff --git a/services/core/java/com/android/server/AlarmManagerService.java b/services/core/java/com/android/server/AlarmManagerService.java
+index 9b83976..65fd7c9 100644
+--- a/services/core/java/com/android/server/AlarmManagerService.java
++++ b/services/core/java/com/android/server/AlarmManagerService.java
+@@ -33,6 +33,7 @@ import android.content.ContentResolver;
+ import android.content.Context;
+ import android.content.Intent;
+ import android.content.IntentFilter;
++import android.content.pm.ApplicationInfo;
+ import android.content.pm.PackageManager;
+ import android.database.ContentObserver;
+ import android.net.Uri;
+@@ -51,20 +52,13 @@ import android.os.UserHandle;
+ import android.os.WorkSource;
+ /// M: Uplink Traffic Shaping feature start @{
+ import android.os.INetworkManagementService;
++import android.util.*;
+ import com.mediatek.datashaping.IDataShapingManager;
+ /// M: end
+ import android.provider.Settings;
+ import android.text.TextUtils;
+ import android.text.format.Time;
+ import android.text.format.DateFormat;
+-import android.util.ArrayMap;
+-import android.util.KeyValueListParser;
+-import android.util.Log;
+-import android.util.Slog;
+-import android.util.SparseArray;
+-import android.util.SparseBooleanArray;
+-import android.util.SparseLongArray;
+-import android.util.TimeUtils;
+ 
+ import java.io.ByteArrayOutputStream;
+ import java.io.FileDescriptor;
+@@ -113,7 +107,7 @@ class AlarmManagerService extends SystemService {
+ 
+     static final String TAG = "AlarmManager";
+     static final String ClockReceiver_TAG = "ClockReceiver";
+-    static boolean localLOGV = false;
++    static boolean localLOGV = true;
+     static boolean DEBUG_BATCH = localLOGV || false;
+     static boolean DEBUG_VALIDATE = localLOGV || false;
+     static final boolean DEBUG_ALARM_CLOCK = localLOGV || false;
+@@ -126,7 +120,7 @@ class AlarmManagerService extends SystemService {
+             = new Intent().addFlags(Intent.FLAG_FROM_BACKGROUND | Intent.FLAG_WITH_BACKGROUND_PRIORITY);
+     /// @}
+     static final IncreasingTimeOrder sIncreasingTimeOrder = new IncreasingTimeOrder();
+-    
++
+     static final boolean WAKEUP_STATS = false;
+ 
+     private static final Intent NEXT_ALARM_CLOCK_CHANGED_INTENT = new Intent(
+@@ -740,10 +734,12 @@ class AlarmManagerService extends SystemService {
+         long whenElapsed = convertToElapsed(a.when, a.type);
+         //M using the powerSaving feature
+         long maxElapsed;
+-        if (mSupportAlarmGrouping && (mAmPlus != null)) {
++        if (mSupportAlarmGrouping && (mAmPlus != null) && !isTimeTickEvent(a.type, a.operation)) {
+             // M: BG powerSaving feature
+             maxElapsed = mAmPlus.getMaxTriggerTime(a.type, whenElapsed, a.windowLength,
+                          a.repeatInterval, a.operation, mAlarmMode, true);
++            Log.d(TAG, "tcao: reAddAlarmLocked--> MTK rebatch pkg=" + a.operation.getTargetPackage()
++                    + ", type="+ a.type);
+             if (maxElapsed < 0) {
+                 maxElapsed = 0 - maxElapsed;
+                 a.needGrouping = false;
+@@ -802,6 +798,7 @@ class AlarmManagerService extends SystemService {
+ 
+         // And send a TIME_TICK right now, since it is important to get the UI updated.
+         try {
++            Log.d(TAG, "tcao: restorePendingWhileIdleAlarmsLocked==> send a TIME_TICK right now, since it is important to get the UI updated.");
+             mTimeTickSender.send();
+         } catch (PendingIntent.CanceledException e) {
+         }
+@@ -918,7 +915,7 @@ class AlarmManagerService extends SystemService {
+         intent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING);
+         mDateChangeSender = PendingIntent.getBroadcastAsUser(getContext(), 0, intent,
+                 Intent.FLAG_RECEIVER_REGISTERED_ONLY_BEFORE_BOOT, UserHandle.ALL);
+-        
++
+         // now that we have initied the driver schedule the alarm
+         mClockReceiver = new ClockReceiver();
+         mClockReceiver.scheduleTimeTickEvent();
+@@ -949,7 +946,7 @@ class AlarmManagerService extends SystemService {
+         mDmResendList = new ArrayList<Alarm>();
+         // /@}
+ 
+-        
++
+         if (mNativeData != 0) {
+             AlarmThread waitThread = new AlarmThread();
+             waitThread.start();
+@@ -1163,8 +1160,10 @@ class AlarmManagerService extends SystemService {
+         final long triggerElapsed = (nominalTrigger > minTrigger) ? nominalTrigger : minTrigger;
+ 
+         long maxElapsed;
+-        if (mSupportAlarmGrouping && (mAmPlus != null)) {
++        // add by ting.cao@tcl.com
++        if (mSupportAlarmGrouping && (mAmPlus != null) && !isTimeTickEvent(type, operation)) {
+             // M: BG powerSaving feature
++            Log.d(TAG, "tcao: setImpl--> MTK rebatch pkg=" + operation.getTargetPackage()+", type=" + type);
+             maxElapsed = mAmPlus.getMaxTriggerTime(type, triggerElapsed, windowLength, interval, operation, mAlarmMode, true);
+             if (maxElapsed < 0) {
+                 maxElapsed = 0 - maxElapsed;
+@@ -2144,6 +2143,8 @@ class AlarmManagerService extends SystemService {
+                     if (mMaxDelayTime < thisDelayTime) {
+                         mMaxDelayTime = thisDelayTime;
+                     }
++                    Log.d(TAG, "tcao: Screen on ## mPendingNonWakeupAlarms="+mPendingNonWakeupAlarms.size()
++                    +", mTotalDelayTime="+mTotalDelayTime+", mMaxDelayTime="+mMaxDelayTime + "\t\t===> deliverAlarmsLocked()");
+                     deliverAlarmsLocked(mPendingNonWakeupAlarms, nowELAPSED);
+                     mPendingNonWakeupAlarms.clear();
+                 }
+@@ -2153,8 +2154,15 @@ class AlarmManagerService extends SystemService {
+                         mNonInteractiveTime = dur;
+                     }
+                 }
++                // add by ting.cao about send a TIME_TICK right now, since it is important to get the UI updated.
++                try {
++                    Log.d(TAG, "tcao: screen on ## send a TIME_TICK right now");
++                    mTimeTickSender.send();
++                } catch (PendingIntent.CanceledException e) {
++                }
+             } else {
+                 mNonInteractiveStartTime = nowELAPSED;
++                Log.d(TAG, "tcao: Screen off ## mNonInteractiveStartTime="+mNonInteractiveStartTime);
+             }
+         }
+     }
+@@ -2192,7 +2200,7 @@ class AlarmManagerService extends SystemService {
+             Slog.d(TAG, "the mNativeData from RTC is abnormal,  mNativeData = " + mNativeData);
+             Message msg = Message.obtain();
+             msg.what = ALARM_EVENT;
+-            
++
+             mHandler.removeMessages(ALARM_EVENT);
+             mHandler.sendMessageAtTime(msg, when);
+         }
+@@ -2313,8 +2321,11 @@ class AlarmManagerService extends SystemService {
+                     final long delta = alarm.count * alarm.repeatInterval;
+                     final long nextElapsed = alarm.whenElapsed + delta;
+                     final long maxElapsed;
+-                    if (mSupportAlarmGrouping && (mAmPlus != null)) {
++                    if (mSupportAlarmGrouping && (mAmPlus != null)
++                            && !isTimeTickEvent(alarm.type, alarm.operation)) {
+                          // M: BG powerSaving feature
++                        Log.d(TAG, "tcao: triggerAlarmsLocked--> MTK rebatch pkg=" + alarm.operation.getTargetPackage()
++                                + ", type="+ alarm.type);
+                         maxElapsed = mAmPlus.getMaxTriggerTime(alarm.type, nextElapsed, alarm.windowLength,
+                         alarm.repeatInterval, alarm.operation, mAlarmMode, true);
+                     } else {
+@@ -2369,7 +2380,7 @@ class AlarmManagerService extends SystemService {
+             return 0;
+         }
+     }
+-    
++
+     private static class Alarm {
+         public final int type;
+         public final long origWhen;
+@@ -2683,6 +2694,10 @@ class AlarmManagerService extends SystemService {
+         }
+     }
+ 
++    /** TODO: 1. !(type==3 && isSystemPkg)
++     *       2. set flag around setImpl() function in scheduleTimeTickEvent()
++     *       3. compensate TIME_TICKER alarm in the AlarmThread class
++     */
+     private class AlarmThread extends Thread
+     {
+         public AlarmThread()
+@@ -2739,7 +2754,7 @@ class AlarmManagerService extends SystemService {
+                         // The change is by at least +/- 500 ms (or this is the first change),
+                         // let's do it!
+                         if (DEBUG_BATCH) {
+-                            Slog.v(TAG, "Time changed notification from kernel; rebatching");
++                            Slog.v(TAG, "tcao: Time changed notification from kernel; rebatching");
+                         }
+                         removeImpl(mTimeTickSender);
+                         rebatchAllAlarms();
+@@ -2862,10 +2877,10 @@ class AlarmManagerService extends SystemService {
+         public static final int MINUTE_CHANGE_EVENT = 2;
+         public static final int DATE_CHANGE_EVENT = 3;
+         public static final int SEND_NEXT_ALARM_CLOCK_CHANGED = 4;
+-        
++
+         public AlarmHandler() {
+         }
+-        
++
+         public void handleMessage(Message msg) {
+             if (msg.what == ALARM_EVENT) {
+                 ArrayList<Alarm> triggerList = new ArrayList<Alarm>();
+@@ -2894,7 +2909,7 @@ class AlarmManagerService extends SystemService {
+             }
+         }
+     }
+-    
++
+     class ClockReceiver extends BroadcastReceiver {
+         public ClockReceiver() {
+             IntentFilter filter = new IntentFilter();
+@@ -2902,12 +2917,12 @@ class AlarmManagerService extends SystemService {
+             filter.addAction(Intent.ACTION_DATE_CHANGED);
+             getContext().registerReceiver(this, filter);
+         }
+-        
++
+         @Override
+         public void onReceive(Context context, Intent intent) {
+             if (intent.getAction().equals(Intent.ACTION_TIME_TICK)) {
+                 if (DEBUG_BATCH) {
+-                    Slog.v(TAG, "Received TIME_TICK alarm; rescheduling");
++                    Slog.v(TAG, "tcao: Received TIME_TICK alarm; rescheduling");
+                 }
+                 Slog.v(TAG, "mSupportAlarmGrouping = " + mSupportAlarmGrouping +
+                             "  mAmPlus = " + mAmPlus);
+@@ -2923,7 +2938,7 @@ class AlarmManagerService extends SystemService {
+                 scheduleDateChangedEvent();
+             }
+         }
+-        
++
+         public void scheduleTimeTickEvent() {
+             final long currentTime = System.currentTimeMillis();
+             final long nextTime = 60000 * ((currentTime / 60000) + 1);
+@@ -2931,7 +2946,8 @@ class AlarmManagerService extends SystemService {
+             // Schedule this event for the amount of time that it would take to get to
+             // the top of the next minute.
+             final long tickEventDelay = nextTime - currentTime;
+-
++            Log.d(TAG, " $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=" + tickEventDelay);
++re
+             final WorkSource workSource = null; // Let system take blame for time tick events.
+             setImpl(ELAPSED_REALTIME, SystemClock.elapsedRealtime() + tickEventDelay, 0,
+                     0, mTimeTickSender, AlarmManager.FLAG_STANDALONE, workSource, null,
+@@ -2952,7 +2968,7 @@ class AlarmManagerService extends SystemService {
+                     AlarmManager.FLAG_STANDALONE, workSource, null, Process.myUid());
+         }
+     }
+-    
++
+     class InteractiveStateReceiver extends BroadcastReceiver {
+         public InteractiveStateReceiver() {
+             IntentFilter filter = new IntentFilter();
+@@ -2985,7 +3001,7 @@ class AlarmManagerService extends SystemService {
+             sdFilter.addAction(Intent.ACTION_UID_REMOVED);
+             getContext().registerReceiver(this, sdFilter);
+         }
+-        
++
+         @Override
+         public void onReceive(Context context, Intent intent) {
+             synchronized (mLock) {
+@@ -3055,7 +3071,7 @@ class AlarmManagerService extends SystemService {
+             }
+         }
+     }
+-    
++
+     private final BroadcastStats getStatsLocked(PendingIntent pi) {
+         String pkg = pi.getCreatorPackage();
+         int uid = pi.getCreatorUid();
+@@ -3587,4 +3603,17 @@ class AlarmManagerService extends SystemService {
+      }
+     }
+     /// M: end
++
++    // add by ting.cao for defect:2379964 about filter TIME_TICK out of rebatching
++    private boolean isTimeTickEvent(int type, PendingIntent operation) {
++        String packageName = operation.getTargetPackage();
++        if (packageName == null) {
++            return false;
++        }
++        if ((type == ELAPSED_REALTIME) && packageName.equals("android")) {
++            Log.d(TAG, "tcao: time tick ( pkg):" + packageName);
++            return true;
++        }
++        return false;
++    }
+ }

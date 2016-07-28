@@ -1,0 +1,124 @@
+
+
+1. 不走MTK对齐流程android系统仍然还是会做对齐，并不能保证TIME_TICK完全不对齐？
+  Android原生的对TIME_TICK的alarm也会对齐，因为它是ELAPSED_REALTIME的alarm。MTK修改后也没有排除该alarm对齐
+
+2. 为什么MTK的改动会产生这个问题？android原生机制也会影响TIME_TICK
+  android原生有这样的问题吗？currentNonWakeupFuzzLocked()一直return false，应该不会有这样的问题了？？？
+  答案见【5】
+
+3. android原生机制对齐的条件是什么??
+  对齐范围：如果不是精准的，75%的重复间隔或者75%的现在到触发时间之间的时间区，最小10s
+          如果指定了windowLength，范围就是windowLength
+  对齐条件：不是FLAG_STANDALONE的alarm都会被对齐
+
+4. MTK rebatch是不是针对RTC_WAKEUP 和ELAPSED_REALTIME_WAKEUP两种模式？？
+    【MTK】： 是的，只针对唤醒闹钟对齐，不唤醒闹钟对功耗没有影响（测试过），所以不需要batch
+
+5. 增加MTK 的patch对TIME_TICK的影响是TIME_TICK被对齐到一个把batching中导致延迟，但是亮屏后所有pendingalarm都会被发送，所以不会有长时间时间不准的情况发生啊？？
+    【taco】：TIME_TICK原生系统也会被对齐，但是在触发的时候会被添加到mPendingNonWakeupAlarms列表，延迟触发。在亮屏的时候，系统会deliver所有mPendingNonWakeupAlarms
+    中的alarms，所以不会发生TIME_TICK亮屏后长时间不更新的情况。
+    而MTK的修改将currentNonWakeupFuzzLocked()方法return回0，这样什么时候都不会有alarm添加到mPendingNonWakeupAlarms列表中，亮屏的deliver也没用了，导致亮屏后
+    因为某种原因TIME_TICK长时间不触发，系统时间（未更新）和Keyguard时间不一致的情况
+
+
+
+6. currentNonWakeupFuzzLocked()方法MTK改动为0，这样就没有pending的alarm了，所有alarm都会被执行？？？？
+  【MTK】：为nonwakeup的alarms对功耗没有影响，打开延迟这种alarms，会需要nonwakeup alarm对齐的APP产生影响，所以返回0.打开不打开对功耗都没有影响
+
+
+
+
+7. currentNonWakeupFuzzLocked() return 0，所有alarms都会被deliver，TIME_TICK顶多只会被对齐延迟下，没有对齐的TIME_TICK都会被直接deliver。只能
+deliver的比以前更频繁，这跟亮灭屏没有关系，亮灭屏只会影响batch的状态（MTK）。那为什么会出现TIME_TICK长时间不更新的状态？！！这不应该
+    查该问题是否是单机问题，后来修改patch不复现，是不是因为换版本换手机了？？？怀疑是kernel alarm工作不正常导致的！
+  【MTK】：底层RTC会suspend non-wakeup的alarm，当有wakeup的alarm或者亮屏操作时释放所有未发送的non-wakeup的alarm。所以google的currentNonWakeupFuzzLocked()方法已经失效了
+  MTK在底层已经实现了该机制。之所以注掉是为了解决之前碰到cts 测试fail以及一笔在L1.MP9手表项目上闹钟循环设置导致无法休眠的问题。
+        TIME_TICK长时间未发送（30min以上）有可能是AMS set TIME_TICK alarm未成功，或者是kernel RTC到时未发送。
+  【MTK回复如下】：
+        注释掉currentNonWakeupFuzzLocked，的确导致没有在灭屏下将非唤醒的闹钟延时，也就是不会在亮屏时去触发，interactiveStateChangedLocked函数失效，但内部再三确认，
+    我司底层RTC机制在灭屏suspend状态时，本身会将非唤醒的闹钟延时，这里的延时即是底层在suspend状态不会去触发，延时的时长取决于suspend的时长，但在有唤醒类型的闹钟或亮屏到来时，
+    底层退出suspend状态，就会主动触发之前非唤醒延时的闹钟，这个就跟google的亮屏处理效果是一样的。
+        而如果不注释currentNonWakeupFuzzLocked，之前碰到cts 测试fail以及一笔在L1.MP9手表项目上闹钟循环设置导致无法休眠的问题。所以，很抱歉，还是建议贵司保留我司注释掉
+    currentNonWakeFuzzLocked的修改。
+        当然，如果要处理亮屏后的状态栏时间更新，不一定要重发time tick的alarm，可以在状态栏接受screen on的广播，自己主动去更新时间，
+        也就是代码/frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/policy/Clock.java的mIntentReceiver:onReceive()--->updateClock()，
+        在mIntentReceiver的广播中再注册screen on的intent即可，这样避免重发time tick，只是重复调用updateclock而已，这个方法会更好。
+  【tcao】：确认后得到TIME_TICK长时间未发送不是单体问题，很多老大都能复现该问题。在Settings中关闭MTK的省电功能，即batching改动部分，该问题不会复现，说明还是MTK的改动出现问题，AMS？
+    因为MTK的RTC机制，所以并不会有non-wakeup的alarm deliver频繁现象。所以个人怀疑是RTC机制出现问题或者AMS确实没有将TIME_TICK set到底层，或者真是rebatch机制的问题，应该只是表象。
+
+
+
+
+
+
+
+
+
+8. 这里已经重新发送TIME_TICK了？
+void restorePendingWhileIdleAlarmsLocked() {
+        // And send a TIME_TICK right now, since it is important to get the UI updated.
+        try {
+            mTimeTickSender.send();
+        } catch (PendingIntent.CanceledException e) {
+        }
+    }
+
+
+/** TODO: 1. !(type==3 && isSystemPkg)
+     *       2. set flag around setImpl() function in scheduleTimeTickEvent()
+     *       3. compensate TIME_TICKER alarm in the AlarmThread class
+     */
+
+
+ 3. compensate TIME_TICKER alarm in the AlarmThread class
+
+Screen on's log:
+~$ adb logcat |grep "scheduleTimeTickEvent\|Received TIME_TICK alarm\|tcao: screen on"
+
+06-28 18:27:00.020   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:00.020   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=59980
+
+06-28 18:27:01.923   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:02.002   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:02.003   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=57998
+
+06-28 18:27:09.143   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:09.210   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:09.210   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=50790
+
+06-28 18:27:12.591   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:12.632   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:12.632   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=47368
+
+06-28 18:27:16.781   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:16.828   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:16.829   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=43171
+
+06-28 18:27:21.278   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:21.314   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:21.315   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=38685
+
+06-28 18:27:25.467   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:25.534   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:25.535   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=34465
+
+06-28 18:27:33.778   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:33.811   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:33.811   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=26189
+
+06-28 18:27:41.481   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:41.550   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:41.551   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=18450
+
+06-28 18:27:46.614   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:46.655   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:46.656   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=13344
+
+06-28 18:27:51.277   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:51.302   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:51.302   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=8698
+
+06-28 18:27:54.854   975   975 D AlarmManager: tcao: screen on ## send a TIME_TICK right now
+06-28 18:27:54.899   975   975 V AlarmManager: tcao: Received TIME_TICK alarm; rescheduling
+06-28 18:27:54.900   975   975 D AlarmManager:  $$ scheduleTimeTickEvent: tickEventDelay(<=60?)=5100
