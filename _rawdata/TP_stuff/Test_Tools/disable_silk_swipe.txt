@@ -1,0 +1,33 @@
+关闭MTK silk swipe feature的方法：
+
+1. root手机：
+ 暗码： *#*#212018#*#*，root手机
+ 然后adb shell进入手机
+ 关闭手机的linux保护机制
+    # setenforce 0
+ 查看设置是否成功
+    # getenforce
+ 如果显示Permissive，说明成功了，如果显示Enforcing说明不成功
+
+
+2. 执行下面两条命令关闭MTK feature：
+    $ adb shell setprop sys.input.TouchSilkSwipeLevel 0
+    $ adb shell setprop sys.input.TouchFilterEnable false
+ 用下面的命令查看是否生效
+    $ adb shell getprop | grep Touch
+ 如果显示下面的内容说明生效
+ [sys.input.TouchFilterEnable]: [false]
+ [sys.input.TouchSilkSwipeLevel]: [0]
+
+
+3. 软重启手机
+    $ adb shell stop;adb shell start
+ 等待手机重启后重新测试
+
+ 4. $ adb shell dumpsys input
+
+
+
+打开fitler：
+    $ adb shell setprop sys.input.TouchSilkSwipeLevel 2
+    $ adb shell setprop sys.input.TouchFilterEnable true

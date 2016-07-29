@@ -1,0 +1,384 @@
+add device 1: /dev/input/event24
+  name:     "mtk-tpd-kpd"
+add device 2: /dev/input/event23
+  name:     "mtk-tpd"
+add device 3: /dev/input/event22
+  name:     "m_uncali_mag_input"
+add device 4: /dev/input/event21
+  name:     "m_uncali_gyro_input"
+add device 5: /dev/input/event20
+  name:     "m_gmrv_input"
+add device 6: /dev/input/event19
+  name:     "m_grv_input"
+add device 7: /dev/input/event18
+  name:     "m_la_input"
+add device 8: /dev/input/event17
+  name:     "m_rv_input"
+add device 9: /dev/input/event16
+  name:     "m_grav_input"
+add device 10: /dev/input/event15
+  name:     "m_glg_input"
+add device 11: /dev/input/event14
+  name:     "m_tilt_input"
+add device 12: /dev/input/event13
+  name:     "m_pedo_input"
+add device 13: /dev/input/event12
+  name:     "m_pkup_input"
+add device 14: /dev/input/event11
+  name:     "m_act_input"
+add device 15: /dev/input/event10
+  name:     "m_step_c_input"
+add device 16: /dev/input/event9
+  name:     "m_mag_input"
+add device 17: /dev/input/event8
+  name:     "m_gyro_input"
+add device 18: /dev/input/event7
+  name:     "m_acc_input"
+add device 19: /dev/input/event6
+  name:     "m_alsps_input"
+add device 20: /dev/input/event5
+  name:     "m_batch_input"
+add device 21: /dev/input/event4
+  name:     "hwmdata"
+add device 22: /dev/input/event3
+  name:     "hall"
+add device 23: /dev/input/event1
+  name:     "gf-key"
+add device 24: /dev/input/event0
+  name:     "ACCDET"
+add device 25: /dev/input/event2
+  name:     "mtk-kpd"
+[    3096.974212] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3096.974212] /dev/input/event23: EV_KEY       BTN_TOUCH            DOWN                
+[    3096.974212] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3096.974212] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3096.974212] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b1            
+[    3096.974212] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3096.974212] /dev/input/event23: EV_SYN       SYN_REPORT           00000000            
+[    3096.984292] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3096.984292] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3096.984292] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3096.984292] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b1            
+[    3096.984292] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3096.984292] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 99
+[    3096.993861] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3096.993861] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3096.993861] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3096.993861] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b1            
+[    3096.993861] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3096.993861] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 104
+[    3097.003818] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.003818] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.003818] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3097.003818] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b1            
+[    3097.003818] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.003818] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.013722] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.013722] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.013722] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3097.013722] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b1            
+[    3097.013722] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.013722] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.023685] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.023685] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.023685] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3097.023685] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b4            
+[    3097.023685] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.023685] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.033606] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.033606] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.033606] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026c            
+[    3097.033606] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000b8            
+[    3097.033606] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.033606] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.043523] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.043523] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.043523] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000026d            
+[    3097.043523] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000be            
+[    3097.043523] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.043523] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.053477] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.053477] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.053477] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000270            
+[    3097.053477] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000c7            
+[    3097.053477] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.053477] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.063395] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.063395] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.063395] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000272            
+[    3097.063395] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000d5            
+[    3097.063395] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.063395] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.073349] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.073349] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.073349] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000276            
+[    3097.073349] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000e4            
+[    3097.073349] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.073349] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.083260] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.083260] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.083260] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000278            
+[    3097.083260] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000000f7            
+[    3097.083260] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.083260] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.093197] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.093197] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.093197] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000027c            
+[    3097.093197] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000010c            
+[    3097.093197] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.093197] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.103129] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.103129] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.103129] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000027e            
+[    3097.103129] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000124            
+[    3097.103129] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.103129] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.113042] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.113042] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.113042] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000282            
+[    3097.113042] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000013f            
+[    3097.113042] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.113042] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.122997] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.122997] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.122997] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000284            
+[    3097.122997] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000015d            
+[    3097.122997] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.122997] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.132917] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.132917] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.132917] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000287            
+[    3097.132917] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000017c            
+[    3097.132917] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.132917] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.142830] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.142830] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.142830] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000028a            
+[    3097.142830] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000001a0            
+[    3097.142830] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.142830] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.152788] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.152788] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.152788] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000028d            
+[    3097.152788] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000001c4            
+[    3097.152788] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.152788] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.162692] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.162692] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.162692] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000028f            
+[    3097.162692] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000001ea            
+[    3097.162692] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.162692] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.172674] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.172674] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.172674] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000292            
+[    3097.172674] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000210            
+[    3097.172674] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.172674] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.182579] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.182579] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.182579] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000295            
+[    3097.182579] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000238            
+[    3097.182579] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.182579] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.192512] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.192512] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.192512] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    00000298            
+[    3097.192512] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000263            
+[    3097.192512] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.192512] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.202457] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.202457] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.202457] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000029b            
+[    3097.202457] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000028f            
+[    3097.202457] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.202457] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.212331] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.212331] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.212331] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    0000029e            
+[    3097.212331] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000002bd            
+[    3097.212331] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.212331] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.222318] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.222318] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.222318] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002a0            
+[    3097.222318] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000002ed            
+[    3097.222318] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.222318] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.232220] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.232220] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.232220] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002a4            
+[    3097.232220] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000031d            
+[    3097.232220] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.232220] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.242153] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.242153] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.242153] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002a6            
+[    3097.242153] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000034d            
+[    3097.242153] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.242153] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.252090] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.252090] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.252090] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002aa            
+[    3097.252090] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000037d            
+[    3097.252090] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.252090] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.261990] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.261990] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.261990] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002ae            
+[    3097.261990] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000003ae            
+[    3097.261990] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.261990] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.271955] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.271955] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.271955] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002b1            
+[    3097.271955] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000003df            
+[    3097.271955] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.271955] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.281889] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.281889] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.281889] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002b5            
+[    3097.281889] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000411            
+[    3097.281889] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.281889] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.291811] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.291811] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.291811] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002b8            
+[    3097.291811] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000442            
+[    3097.291811] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.291811] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.301786] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.301786] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.301786] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002bb            
+[    3097.301786] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000473            
+[    3097.301786] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.301786] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.311650] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.311650] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.311650] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002be            
+[    3097.311650] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000004a3            
+[    3097.311650] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.311650] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.321631] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.321631] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.321631] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002c1            
+[    3097.321631] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000004d2            
+[    3097.321631] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.321631] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.331571] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.331571] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.331571] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002c4            
+[    3097.331571] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000004fe            
+[    3097.331571] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.331571] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.341461] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.341461] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.341461] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002c5            
+[    3097.341461] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000529            
+[    3097.341461] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.341461] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.351425] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.351425] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.351425] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002c7            
+[    3097.351425] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000556            
+[    3097.351425] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.351425] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.361315] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.361315] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.361315] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002ca            
+[    3097.361315] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000582            
+[    3097.361315] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.361315] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.371262] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.371262] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.371262] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002cc            
+[    3097.371262] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000005af            
+[    3097.371262] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.371262] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.381220] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.381220] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.381220] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002cf            
+[    3097.381220] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000005d9            
+[    3097.381220] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.381220] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.391128] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.391128] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.391128] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002d1            
+[    3097.391128] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000602            
+[    3097.391128] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.391128] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.401148] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.401148] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.401148] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002d2            
+[    3097.401148] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000062a            
+[    3097.401148] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.401148] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 99
+[    3097.410989] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.410989] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.410989] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002d4            
+[    3097.410989] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000064f            
+[    3097.410989] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.410989] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.420960] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.420960] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.420960] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002d6            
+[    3097.420960] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000671            
+[    3097.420960] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.420960] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.430864] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.430864] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.430864] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002d7            
+[    3097.430864] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000691            
+[    3097.430864] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.430864] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.440732] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.440732] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.440732] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002da            
+[    3097.440732] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000006ae            
+[    3097.440732] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.440732] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.450705] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.450705] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.450705] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002dc            
+[    3097.450705] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000006c8            
+[    3097.450705] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.450705] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.460592] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.460592] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.460592] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002dd            
+[    3097.460592] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000006e1            
+[    3097.460592] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.460592] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 101
+[    3097.470554] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.470554] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.470554] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002e0            
+[    3097.470554] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    000006f5            
+[    3097.470554] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.470554] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.480491] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.480491] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.480491] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002e2            
+[    3097.480491] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000705            
+[    3097.480491] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.480491] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.490412] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.490412] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.490412] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002e7            
+[    3097.490412] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000712            
+[    3097.490412] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.490412] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.500315] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.500315] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.500315] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002eb            
+[    3097.500315] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    0000071e            
+[    3097.500315] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.500315] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 100
+[    3097.509896] /dev/input/event23: EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    3097.509896] /dev/input/event23: EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    3097.509896] /dev/input/event23: EV_ABS       ABS_MT_POSITION_X    000002ee            
+[    3097.509896] /dev/input/event23: EV_ABS       ABS_MT_POSITION_Y    00000728            
+[    3097.509896] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.509896] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 104
+[    3097.519665] /dev/input/event23: EV_KEY       BTN_TOUCH            UP                  
+[    3097.519665] /dev/input/event23: EV_SYN       SYN_MT_REPORT        00000000            
+[    3097.519665] /dev/input/event23: EV_SYN       SYN_REPORT           00000000             rate 102

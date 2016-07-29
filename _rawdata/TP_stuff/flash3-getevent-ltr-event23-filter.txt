@@ -1,0 +1,940 @@
+[    1603.831823] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.831823] EV_KEY       BTN_TOUCH            DOWN                
+[    1603.831823] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.831823] EV_ABS       ABS_MT_POSITION_X    00000271            
+[    1603.831823] EV_ABS       ABS_MT_POSITION_Y    0000014f            
+[    1603.831823] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.831823] EV_SYN       SYN_REPORT           00000000            
+[    1603.841700] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.841700] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.841700] EV_ABS       ABS_MT_POSITION_X    00000271            
+[    1603.841700] EV_ABS       ABS_MT_POSITION_Y    0000014f            
+[    1603.841700] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.841700] EV_SYN       SYN_REPORT           00000000             rate 101
+[    1603.851818] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.851818] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.851818] EV_ABS       ABS_MT_POSITION_X    00000271            
+[    1603.851818] EV_ABS       ABS_MT_POSITION_Y    0000014f            
+[    1603.851818] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.851818] EV_SYN       SYN_REPORT           00000000             rate 98
+[    1603.861733] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.861733] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.861733] EV_ABS       ABS_MT_POSITION_X    0000026e            
+[    1603.861733] EV_ABS       ABS_MT_POSITION_Y    00000150            
+[    1603.861733] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.861733] EV_SYN       SYN_REPORT           00000000             rate 100
+[    1603.872090] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.872090] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.872090] EV_ABS       ABS_MT_POSITION_X    0000026a            
+[    1603.872090] EV_ABS       ABS_MT_POSITION_Y    00000159            
+[    1603.872090] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.872090] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1603.882427] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.882427] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.882427] EV_ABS       ABS_MT_POSITION_X    0000025f            
+[    1603.882427] EV_ABS       ABS_MT_POSITION_Y    0000017b            
+[    1603.882427] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.882427] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1603.892719] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.892719] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.892719] EV_ABS       ABS_MT_POSITION_X    0000024f            
+[    1603.892719] EV_ABS       ABS_MT_POSITION_Y    000001ba            
+[    1603.892719] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.892719] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1603.903432] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.903432] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.903432] EV_ABS       ABS_MT_POSITION_X    0000023a            
+[    1603.903432] EV_ABS       ABS_MT_POSITION_Y    0000021d            
+[    1603.903432] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.903432] EV_SYN       SYN_REPORT           00000000             rate 93
+[    1603.913404] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.913404] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.913404] EV_ABS       ABS_MT_POSITION_X    00000225            
+[    1603.913404] EV_ABS       ABS_MT_POSITION_Y    0000028f            
+[    1603.913404] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.913404] EV_SYN       SYN_REPORT           00000000             rate 100
+[    1603.923704] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.923704] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.923704] EV_ABS       ABS_MT_POSITION_X    00000212            
+[    1603.923704] EV_ABS       ABS_MT_POSITION_Y    00000311            
+[    1603.923704] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.923704] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1603.934033] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.934033] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.934033] EV_ABS       ABS_MT_POSITION_X    00000201            
+[    1603.934033] EV_ABS       ABS_MT_POSITION_Y    00000392            
+[    1603.934033] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.934033] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1603.944339] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.944339] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.944339] EV_ABS       ABS_MT_POSITION_X    000001f3            
+[    1603.944339] EV_ABS       ABS_MT_POSITION_Y    0000040f            
+[    1603.944339] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.944339] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1603.954692] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.954692] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.954692] EV_ABS       ABS_MT_POSITION_X    000001e7            
+[    1603.954692] EV_ABS       ABS_MT_POSITION_Y    00000482            
+[    1603.954692] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.954692] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1603.965012] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.965012] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.965012] EV_ABS       ABS_MT_POSITION_X    000001db            
+[    1603.965012] EV_ABS       ABS_MT_POSITION_Y    000004e9            
+[    1603.965012] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.965012] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1603.975352] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.975352] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.975352] EV_ABS       ABS_MT_POSITION_X    000001cf            
+[    1603.975352] EV_ABS       ABS_MT_POSITION_Y    00000540            
+[    1603.975352] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.975352] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1603.985792] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.985792] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.985792] EV_ABS       ABS_MT_POSITION_X    000001c5            
+[    1603.985792] EV_ABS       ABS_MT_POSITION_Y    00000583            
+[    1603.985792] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.985792] EV_SYN       SYN_REPORT           00000000             rate 95
+[    1603.996027] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1603.996027] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1603.996027] EV_ABS       ABS_MT_POSITION_X    000001bc            
+[    1603.996027] EV_ABS       ABS_MT_POSITION_Y    000005b2            
+[    1603.996027] EV_SYN       SYN_MT_REPORT        00000000            
+[    1603.996027] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.006346] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.006346] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.006346] EV_ABS       ABS_MT_POSITION_X    000001b6            
+[    1604.006346] EV_ABS       ABS_MT_POSITION_Y    000005cb            
+[    1604.006346] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.006346] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.016682] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.016682] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.016682] EV_ABS       ABS_MT_POSITION_X    000001b1            
+[    1604.016682] EV_ABS       ABS_MT_POSITION_Y    000005d3            
+[    1604.016682] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.016682] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.026994] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.026994] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.026994] EV_ABS       ABS_MT_POSITION_X    000001af            
+[    1604.026994] EV_ABS       ABS_MT_POSITION_Y    000005cb            
+[    1604.026994] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.026994] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.037339] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.037339] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.037339] EV_ABS       ABS_MT_POSITION_X    000001ae            
+[    1604.037339] EV_ABS       ABS_MT_POSITION_Y    00000589            
+[    1604.037339] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.037339] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.047669] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.047669] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.047669] EV_ABS       ABS_MT_POSITION_X    000001b1            
+[    1604.047669] EV_ABS       ABS_MT_POSITION_Y    0000050d            
+[    1604.047669] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.047669] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.058001] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.058001] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.058001] EV_ABS       ABS_MT_POSITION_X    000001be            
+[    1604.058001] EV_ABS       ABS_MT_POSITION_Y    0000045e            
+[    1604.058001] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.058001] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.068385] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.068385] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.068385] EV_ABS       ABS_MT_POSITION_X    000001d2            
+[    1604.068385] EV_ABS       ABS_MT_POSITION_Y    000003ae            
+[    1604.068385] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.068385] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.078677] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.078677] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.078677] EV_ABS       ABS_MT_POSITION_X    000001ec            
+[    1604.078677] EV_ABS       ABS_MT_POSITION_Y    00000300            
+[    1604.078677] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.078677] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.089022] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.089022] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.089022] EV_ABS       ABS_MT_POSITION_X    00000209            
+[    1604.089022] EV_ABS       ABS_MT_POSITION_Y    00000266            
+[    1604.089022] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.089022] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.099326] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.099326] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.099326] EV_ABS       ABS_MT_POSITION_X    00000225            
+[    1604.099326] EV_ABS       ABS_MT_POSITION_Y    000001eb            
+[    1604.099326] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.099326] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.109654] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.109654] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.109654] EV_ABS       ABS_MT_POSITION_X    0000023e            
+[    1604.109654] EV_ABS       ABS_MT_POSITION_Y    00000199            
+[    1604.109654] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.109654] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.119986] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.119986] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.119986] EV_ABS       ABS_MT_POSITION_X    0000024c            
+[    1604.119986] EV_ABS       ABS_MT_POSITION_Y    0000016d            
+[    1604.119986] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.119986] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.130342] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.130342] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.130342] EV_ABS       ABS_MT_POSITION_X    00000254            
+[    1604.130342] EV_ABS       ABS_MT_POSITION_Y    0000015d            
+[    1604.130342] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.130342] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.140658] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.140658] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.140658] EV_ABS       ABS_MT_POSITION_X    00000254            
+[    1604.140658] EV_ABS       ABS_MT_POSITION_Y    0000015d            
+[    1604.140658] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.140658] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.151021] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.151021] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.151021] EV_ABS       ABS_MT_POSITION_X    00000252            
+[    1604.151021] EV_ABS       ABS_MT_POSITION_Y    00000172            
+[    1604.151021] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.151021] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.161405] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.161405] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.161405] EV_ABS       ABS_MT_POSITION_X    00000240            
+[    1604.161405] EV_ABS       ABS_MT_POSITION_Y    000001be            
+[    1604.161405] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.161405] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.171613] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.171613] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.171613] EV_ABS       ABS_MT_POSITION_X    00000222            
+[    1604.171613] EV_ABS       ABS_MT_POSITION_Y    0000023f            
+[    1604.171613] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.171613] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.181951] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.181951] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.181951] EV_ABS       ABS_MT_POSITION_X    000001fd            
+[    1604.181951] EV_ABS       ABS_MT_POSITION_Y    000002e4            
+[    1604.181951] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.181951] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.192261] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.192261] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.192261] EV_ABS       ABS_MT_POSITION_X    000001db            
+[    1604.192261] EV_ABS       ABS_MT_POSITION_Y    00000390            
+[    1604.192261] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.192261] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.202614] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.202614] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.202614] EV_ABS       ABS_MT_POSITION_X    000001c0            
+[    1604.202614] EV_ABS       ABS_MT_POSITION_Y    00000441            
+[    1604.202614] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.202614] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.212943] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.212943] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.212943] EV_ABS       ABS_MT_POSITION_X    000001ae            
+[    1604.212943] EV_ABS       ABS_MT_POSITION_Y    000004ef            
+[    1604.212943] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.212943] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.223266] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.223266] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.223266] EV_ABS       ABS_MT_POSITION_X    000001a6            
+[    1604.223266] EV_ABS       ABS_MT_POSITION_Y    0000058a            
+[    1604.223266] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.223266] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.233632] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.233632] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.233632] EV_ABS       ABS_MT_POSITION_X    000001a6            
+[    1604.233632] EV_ABS       ABS_MT_POSITION_Y    00000607            
+[    1604.233632] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.233632] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.243949] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.243949] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.243949] EV_ABS       ABS_MT_POSITION_X    000001ab            
+[    1604.243949] EV_ABS       ABS_MT_POSITION_Y    00000660            
+[    1604.243949] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.243949] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.254264] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.254264] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.254264] EV_ABS       ABS_MT_POSITION_X    000001af            
+[    1604.254264] EV_ABS       ABS_MT_POSITION_Y    00000691            
+[    1604.254264] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.254264] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.264606] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.264606] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.264606] EV_ABS       ABS_MT_POSITION_X    000001b4            
+[    1604.264606] EV_ABS       ABS_MT_POSITION_Y    000006a0            
+[    1604.264606] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.264606] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.274901] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.274901] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.274901] EV_ABS       ABS_MT_POSITION_X    000001b6            
+[    1604.274901] EV_ABS       ABS_MT_POSITION_Y    00000697            
+[    1604.274901] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.274901] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.285233] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.285233] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.285233] EV_ABS       ABS_MT_POSITION_X    000001bb            
+[    1604.285233] EV_ABS       ABS_MT_POSITION_Y    00000650            
+[    1604.285233] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.285233] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.295566] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.295566] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.295566] EV_ABS       ABS_MT_POSITION_X    000001c5            
+[    1604.295566] EV_ABS       ABS_MT_POSITION_Y    000005cd            
+[    1604.295566] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.295566] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.305868] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.305868] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.305868] EV_ABS       ABS_MT_POSITION_X    000001d4            
+[    1604.305868] EV_ABS       ABS_MT_POSITION_Y    0000050b            
+[    1604.305868] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.305868] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.316259] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.316259] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.316259] EV_ABS       ABS_MT_POSITION_X    000001e5            
+[    1604.316259] EV_ABS       ABS_MT_POSITION_Y    0000043b            
+[    1604.316259] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.316259] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.326551] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.326551] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.326551] EV_ABS       ABS_MT_POSITION_X    000001fb            
+[    1604.326551] EV_ABS       ABS_MT_POSITION_Y    00000363            
+[    1604.326551] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.326551] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.336878] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.336878] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.336878] EV_ABS       ABS_MT_POSITION_X    00000212            
+[    1604.336878] EV_ABS       ABS_MT_POSITION_Y    000002a5            
+[    1604.336878] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.336878] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.347235] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.347235] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.347235] EV_ABS       ABS_MT_POSITION_X    00000224            
+[    1604.347235] EV_ABS       ABS_MT_POSITION_Y    00000219            
+[    1604.347235] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.347235] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.357532] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.357532] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.357532] EV_ABS       ABS_MT_POSITION_X    00000233            
+[    1604.357532] EV_ABS       ABS_MT_POSITION_Y    000001cc            
+[    1604.357532] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.357532] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.367880] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.367880] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.367880] EV_ABS       ABS_MT_POSITION_X    00000239            
+[    1604.367880] EV_ABS       ABS_MT_POSITION_Y    000001af            
+[    1604.367880] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.367880] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.378229] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.378229] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.378229] EV_ABS       ABS_MT_POSITION_X    0000023e            
+[    1604.378229] EV_ABS       ABS_MT_POSITION_Y    000001aa            
+[    1604.378229] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.378229] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.388536] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.388536] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.388536] EV_ABS       ABS_MT_POSITION_X    0000023c            
+[    1604.388536] EV_ABS       ABS_MT_POSITION_Y    000001bd            
+[    1604.388536] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.388536] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.398895] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.398895] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.398895] EV_ABS       ABS_MT_POSITION_X    0000022a            
+[    1604.398895] EV_ABS       ABS_MT_POSITION_Y    0000020d            
+[    1604.398895] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.398895] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.409197] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.409197] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.409197] EV_ABS       ABS_MT_POSITION_X    0000020a            
+[    1604.409197] EV_ABS       ABS_MT_POSITION_Y    0000029d            
+[    1604.409197] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.409197] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.419521] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.419521] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.419521] EV_ABS       ABS_MT_POSITION_X    000001e0            
+[    1604.419521] EV_ABS       ABS_MT_POSITION_Y    00000359            
+[    1604.419521] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.419521] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.429843] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.429843] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.429843] EV_ABS       ABS_MT_POSITION_X    000001bf            
+[    1604.429843] EV_ABS       ABS_MT_POSITION_Y    00000415            
+[    1604.429843] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.429843] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.440205] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.440205] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.440205] EV_ABS       ABS_MT_POSITION_X    000001a5            
+[    1604.440205] EV_ABS       ABS_MT_POSITION_Y    000004cb            
+[    1604.440205] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.440205] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.450523] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.450523] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.450523] EV_ABS       ABS_MT_POSITION_X    00000195            
+[    1604.450523] EV_ABS       ABS_MT_POSITION_Y    00000572            
+[    1604.450523] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.450523] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.460849] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.460849] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.460849] EV_ABS       ABS_MT_POSITION_X    00000189            
+[    1604.460849] EV_ABS       ABS_MT_POSITION_Y    000005f6            
+[    1604.460849] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.460849] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.471181] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.471181] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.471181] EV_ABS       ABS_MT_POSITION_X    00000182            
+[    1604.471181] EV_ABS       ABS_MT_POSITION_Y    0000064a            
+[    1604.471181] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.471181] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.481490] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.481490] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.481490] EV_ABS       ABS_MT_POSITION_X    0000017e            
+[    1604.481490] EV_ABS       ABS_MT_POSITION_Y    00000672            
+[    1604.481490] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.481490] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.491845] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.491845] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.491845] EV_ABS       ABS_MT_POSITION_X    0000017d            
+[    1604.491845] EV_ABS       ABS_MT_POSITION_Y    0000067c            
+[    1604.491845] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.491845] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.502140] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.502140] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.502140] EV_ABS       ABS_MT_POSITION_X    00000181            
+[    1604.502140] EV_ABS       ABS_MT_POSITION_Y    0000064a            
+[    1604.502140] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.502140] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.512471] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.512471] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.512471] EV_ABS       ABS_MT_POSITION_X    0000018d            
+[    1604.512471] EV_ABS       ABS_MT_POSITION_Y    000005cb            
+[    1604.512471] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.512471] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.522799] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.522799] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.522799] EV_ABS       ABS_MT_POSITION_X    000001a4            
+[    1604.522799] EV_ABS       ABS_MT_POSITION_Y    000004fc            
+[    1604.522799] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.522799] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.533137] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.533137] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.533137] EV_ABS       ABS_MT_POSITION_X    000001c4            
+[    1604.533137] EV_ABS       ABS_MT_POSITION_Y    0000040a            
+[    1604.533137] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.533137] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.543471] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.543471] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.543471] EV_ABS       ABS_MT_POSITION_X    000001ec            
+[    1604.543471] EV_ABS       ABS_MT_POSITION_Y    0000031a            
+[    1604.543471] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.543471] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.553794] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.553794] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.553794] EV_ABS       ABS_MT_POSITION_X    00000217            
+[    1604.553794] EV_ABS       ABS_MT_POSITION_Y    00000250            
+[    1604.553794] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.553794] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.564138] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.564138] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.564138] EV_ABS       ABS_MT_POSITION_X    00000238            
+[    1604.564138] EV_ABS       ABS_MT_POSITION_Y    000001c6            
+[    1604.564138] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.564138] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.574461] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.574461] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.574461] EV_ABS       ABS_MT_POSITION_X    0000024f            
+[    1604.574461] EV_ABS       ABS_MT_POSITION_Y    00000180            
+[    1604.574461] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.574461] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.584779] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.584779] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.584779] EV_ABS       ABS_MT_POSITION_X    0000025b            
+[    1604.584779] EV_ABS       ABS_MT_POSITION_Y    00000168            
+[    1604.584779] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.584779] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.595128] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.595128] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.595128] EV_ABS       ABS_MT_POSITION_X    00000261            
+[    1604.595128] EV_ABS       ABS_MT_POSITION_Y    00000168            
+[    1604.595128] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.595128] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.605448] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.605448] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.605448] EV_ABS       ABS_MT_POSITION_X    0000025d            
+[    1604.605448] EV_ABS       ABS_MT_POSITION_Y    00000191            
+[    1604.605448] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.605448] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.615743] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.615743] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.615743] EV_ABS       ABS_MT_POSITION_X    00000245            
+[    1604.615743] EV_ABS       ABS_MT_POSITION_Y    000001fc            
+[    1604.615743] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.615743] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.626112] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.626112] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.626112] EV_ABS       ABS_MT_POSITION_X    0000021d            
+[    1604.626112] EV_ABS       ABS_MT_POSITION_Y    000002a7            
+[    1604.626112] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.626112] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.636431] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.636431] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.636431] EV_ABS       ABS_MT_POSITION_X    000001f1            
+[    1604.636431] EV_ABS       ABS_MT_POSITION_Y    00000370            
+[    1604.636431] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.636431] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.646787] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.646787] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.646787] EV_ABS       ABS_MT_POSITION_X    000001cf            
+[    1604.646787] EV_ABS       ABS_MT_POSITION_Y    0000042d            
+[    1604.646787] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.646787] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.657114] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.657114] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.657114] EV_ABS       ABS_MT_POSITION_X    000001b6            
+[    1604.657114] EV_ABS       ABS_MT_POSITION_Y    000004d9            
+[    1604.657114] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.657114] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.667377] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.667377] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.667377] EV_ABS       ABS_MT_POSITION_X    000001a6            
+[    1604.667377] EV_ABS       ABS_MT_POSITION_Y    00000565            
+[    1604.667377] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.667377] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.677742] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.677742] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.677742] EV_ABS       ABS_MT_POSITION_X    0000019e            
+[    1604.677742] EV_ABS       ABS_MT_POSITION_Y    000005c4            
+[    1604.677742] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.677742] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.688093] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.688093] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.688093] EV_ABS       ABS_MT_POSITION_X    00000199            
+[    1604.688093] EV_ABS       ABS_MT_POSITION_Y    000005f7            
+[    1604.688093] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.688093] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.698382] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.698382] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.698382] EV_ABS       ABS_MT_POSITION_X    00000198            
+[    1604.698382] EV_ABS       ABS_MT_POSITION_Y    00000607            
+[    1604.698382] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.698382] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.708721] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.708721] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.708721] EV_ABS       ABS_MT_POSITION_X    00000199            
+[    1604.708721] EV_ABS       ABS_MT_POSITION_Y    000005f7            
+[    1604.708721] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.708721] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.719044] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.719044] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.719044] EV_ABS       ABS_MT_POSITION_X    000001a4            
+[    1604.719044] EV_ABS       ABS_MT_POSITION_Y    00000595            
+[    1604.719044] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.719044] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.729417] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.729417] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.729417] EV_ABS       ABS_MT_POSITION_X    000001be            
+[    1604.729417] EV_ABS       ABS_MT_POSITION_Y    000004ea            
+[    1604.729417] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.729417] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.739731] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.739731] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.739731] EV_ABS       ABS_MT_POSITION_X    000001e5            
+[    1604.739731] EV_ABS       ABS_MT_POSITION_Y    000003ff            
+[    1604.739731] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.739731] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.749990] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.749990] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.749990] EV_ABS       ABS_MT_POSITION_X    00000215            
+[    1604.749990] EV_ABS       ABS_MT_POSITION_Y    0000031b            
+[    1604.749990] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.749990] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.760359] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.760359] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.760359] EV_ABS       ABS_MT_POSITION_X    00000246            
+[    1604.760359] EV_ABS       ABS_MT_POSITION_Y    0000024f            
+[    1604.760359] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.760359] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.770676] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.770676] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.770676] EV_ABS       ABS_MT_POSITION_X    0000026d            
+[    1604.770676] EV_ABS       ABS_MT_POSITION_Y    000001be            
+[    1604.770676] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.770676] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.781010] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.781010] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.781010] EV_ABS       ABS_MT_POSITION_X    00000286            
+[    1604.781010] EV_ABS       ABS_MT_POSITION_Y    00000172            
+[    1604.781010] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.781010] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.791355] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.791355] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.791355] EV_ABS       ABS_MT_POSITION_X    0000028f            
+[    1604.791355] EV_ABS       ABS_MT_POSITION_Y    0000015f            
+[    1604.791355] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.791355] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.801666] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.801666] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.801666] EV_ABS       ABS_MT_POSITION_X    00000293            
+[    1604.801666] EV_ABS       ABS_MT_POSITION_Y    00000161            
+[    1604.801666] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.801666] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.812034] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.812034] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.812034] EV_ABS       ABS_MT_POSITION_X    0000028d            
+[    1604.812034] EV_ABS       ABS_MT_POSITION_Y    00000189            
+[    1604.812034] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.812034] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.822351] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.822351] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.822351] EV_ABS       ABS_MT_POSITION_X    00000272            
+[    1604.822351] EV_ABS       ABS_MT_POSITION_Y    000001f0            
+[    1604.822351] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.822351] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.832641] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.832641] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.832641] EV_ABS       ABS_MT_POSITION_X    00000244            
+[    1604.832641] EV_ABS       ABS_MT_POSITION_Y    00000298            
+[    1604.832641] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.832641] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.842992] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.842992] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.842992] EV_ABS       ABS_MT_POSITION_X    00000213            
+[    1604.842992] EV_ABS       ABS_MT_POSITION_Y    0000035c            
+[    1604.842992] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.842992] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.853328] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.853328] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.853328] EV_ABS       ABS_MT_POSITION_X    000001eb            
+[    1604.853328] EV_ABS       ABS_MT_POSITION_Y    00000417            
+[    1604.853328] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.853328] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.863645] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.863645] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.863645] EV_ABS       ABS_MT_POSITION_X    000001cd            
+[    1604.863645] EV_ABS       ABS_MT_POSITION_Y    000004c1            
+[    1604.863645] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.863645] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.873992] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.873992] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.873992] EV_ABS       ABS_MT_POSITION_X    000001b9            
+[    1604.873992] EV_ABS       ABS_MT_POSITION_Y    00000553            
+[    1604.873992] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.873992] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.884305] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.884305] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.884305] EV_ABS       ABS_MT_POSITION_X    000001ad            
+[    1604.884305] EV_ABS       ABS_MT_POSITION_Y    000005c2            
+[    1604.884305] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.884305] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.894683] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.894683] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.894683] EV_ABS       ABS_MT_POSITION_X    000001a5            
+[    1604.894683] EV_ABS       ABS_MT_POSITION_Y    00000609            
+[    1604.894683] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.894683] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.905017] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.905017] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.905017] EV_ABS       ABS_MT_POSITION_X    000001a0            
+[    1604.905017] EV_ABS       ABS_MT_POSITION_Y    0000062a            
+[    1604.905017] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.905017] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.915297] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.915297] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.915297] EV_ABS       ABS_MT_POSITION_X    0000019d            
+[    1604.915297] EV_ABS       ABS_MT_POSITION_Y    00000631            
+[    1604.915297] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.915297] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.925635] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.925635] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.925635] EV_ABS       ABS_MT_POSITION_X    000001a2            
+[    1604.925635] EV_ABS       ABS_MT_POSITION_Y    000005fb            
+[    1604.925635] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.925635] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.935945] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.935945] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.935945] EV_ABS       ABS_MT_POSITION_X    000001b0            
+[    1604.935945] EV_ABS       ABS_MT_POSITION_Y    0000057c            
+[    1604.935945] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.935945] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.946288] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.946288] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.946288] EV_ABS       ABS_MT_POSITION_X    000001cb            
+[    1604.946288] EV_ABS       ABS_MT_POSITION_Y    000004b1            
+[    1604.946288] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.946288] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.956591] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.956591] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.956591] EV_ABS       ABS_MT_POSITION_X    000001ed            
+[    1604.956591] EV_ABS       ABS_MT_POSITION_Y    000003cb            
+[    1604.956591] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.956591] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1604.966922] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.966922] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.966922] EV_ABS       ABS_MT_POSITION_X    00000214            
+[    1604.966922] EV_ABS       ABS_MT_POSITION_Y    000002ea            
+[    1604.966922] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.966922] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.977293] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.977293] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.977293] EV_ABS       ABS_MT_POSITION_X    00000238            
+[    1604.977293] EV_ABS       ABS_MT_POSITION_Y    0000022a            
+[    1604.977293] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.977293] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.987643] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.987643] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.987643] EV_ABS       ABS_MT_POSITION_X    00000258            
+[    1604.987643] EV_ABS       ABS_MT_POSITION_Y    000001aa            
+[    1604.987643] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.987643] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1604.997927] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1604.997927] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1604.997927] EV_ABS       ABS_MT_POSITION_X    0000026e            
+[    1604.997927] EV_ABS       ABS_MT_POSITION_Y    0000016b            
+[    1604.997927] EV_SYN       SYN_MT_REPORT        00000000            
+[    1604.997927] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.008265] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.008265] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.008265] EV_ABS       ABS_MT_POSITION_X    0000027c            
+[    1605.008265] EV_ABS       ABS_MT_POSITION_Y    00000159            
+[    1605.008265] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.008265] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.018596] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.018596] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.018596] EV_ABS       ABS_MT_POSITION_X    0000027f            
+[    1605.018596] EV_ABS       ABS_MT_POSITION_Y    0000015e            
+[    1605.018596] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.018596] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.028922] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.028922] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.028922] EV_ABS       ABS_MT_POSITION_X    00000271            
+[    1605.028922] EV_ABS       ABS_MT_POSITION_Y    00000198            
+[    1605.028922] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.028922] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.039222] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.039222] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.039222] EV_ABS       ABS_MT_POSITION_X    0000024f            
+[    1605.039222] EV_ABS       ABS_MT_POSITION_Y    0000020a            
+[    1605.039222] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.039222] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.049564] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.049564] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.049564] EV_ABS       ABS_MT_POSITION_X    0000021f            
+[    1605.049564] EV_ABS       ABS_MT_POSITION_Y    000002b5            
+[    1605.049564] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.049564] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.059898] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.059898] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.059898] EV_ABS       ABS_MT_POSITION_X    000001f6            
+[    1605.059898] EV_ABS       ABS_MT_POSITION_Y    00000368            
+[    1605.059898] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.059898] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.070242] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.070242] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.070242] EV_ABS       ABS_MT_POSITION_X    000001d4            
+[    1605.070242] EV_ABS       ABS_MT_POSITION_Y    00000417            
+[    1605.070242] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.070242] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.080686] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.080686] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.080686] EV_ABS       ABS_MT_POSITION_X    000001bb            
+[    1605.080686] EV_ABS       ABS_MT_POSITION_Y    000004ba            
+[    1605.080686] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.080686] EV_SYN       SYN_REPORT           00000000             rate 95
+[    1605.090868] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.090868] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.090868] EV_ABS       ABS_MT_POSITION_X    000001a9            
+[    1605.090868] EV_ABS       ABS_MT_POSITION_Y    00000541            
+[    1605.090868] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.090868] EV_SYN       SYN_REPORT           00000000             rate 98
+[    1605.101654] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.101654] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.101654] EV_ABS       ABS_MT_POSITION_X    0000019f            
+[    1605.101654] EV_ABS       ABS_MT_POSITION_Y    000005a4            
+[    1605.101654] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.101654] EV_SYN       SYN_REPORT           00000000             rate 92
+[    1605.111493] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.111493] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.111493] EV_ABS       ABS_MT_POSITION_X    0000019c            
+[    1605.111493] EV_ABS       ABS_MT_POSITION_Y    000005d9            
+[    1605.111493] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.111493] EV_SYN       SYN_REPORT           00000000             rate 101
+[    1605.121907] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.121907] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.121907] EV_ABS       ABS_MT_POSITION_X    00000199            
+[    1605.121907] EV_ABS       ABS_MT_POSITION_Y    000005ed            
+[    1605.121907] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.121907] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.132126] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.132126] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.132126] EV_ABS       ABS_MT_POSITION_X    0000019d            
+[    1605.132126] EV_ABS       ABS_MT_POSITION_Y    000005d0            
+[    1605.132126] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.132126] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.142515] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.142515] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.142515] EV_ABS       ABS_MT_POSITION_X    000001ae            
+[    1605.142515] EV_ABS       ABS_MT_POSITION_Y    00000560            
+[    1605.142515] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.142515] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.152883] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.152883] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.152883] EV_ABS       ABS_MT_POSITION_X    000001cb            
+[    1605.152883] EV_ABS       ABS_MT_POSITION_Y    000004a1            
+[    1605.152883] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.152883] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.163127] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.163127] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.163127] EV_ABS       ABS_MT_POSITION_X    000001f4            
+[    1605.163127] EV_ABS       ABS_MT_POSITION_Y    000003b4            
+[    1605.163127] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.163127] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.173460] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.173460] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.173460] EV_ABS       ABS_MT_POSITION_X    00000222            
+[    1605.173460] EV_ABS       ABS_MT_POSITION_Y    000002cf            
+[    1605.173460] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.173460] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.183809] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.183809] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.183809] EV_ABS       ABS_MT_POSITION_X    0000024c            
+[    1605.183809] EV_ABS       ABS_MT_POSITION_Y    00000210            
+[    1605.183809] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.183809] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.194134] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.194134] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.194134] EV_ABS       ABS_MT_POSITION_X    0000026d            
+[    1605.194134] EV_ABS       ABS_MT_POSITION_Y    00000192            
+[    1605.194134] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.194134] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.204480] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.204480] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.204480] EV_ABS       ABS_MT_POSITION_X    0000027f            
+[    1605.204480] EV_ABS       ABS_MT_POSITION_Y    0000015a            
+[    1605.204480] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.204480] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.214788] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.214788] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.214788] EV_ABS       ABS_MT_POSITION_X    00000288            
+[    1605.214788] EV_ABS       ABS_MT_POSITION_Y    0000014b            
+[    1605.214788] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.214788] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.225139] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.225139] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.225139] EV_ABS       ABS_MT_POSITION_X    00000287            
+[    1605.225139] EV_ABS       ABS_MT_POSITION_Y    00000168            
+[    1605.225139] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.225139] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.235498] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.235498] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.235498] EV_ABS       ABS_MT_POSITION_X    00000271            
+[    1605.235498] EV_ABS       ABS_MT_POSITION_Y    000001cd            
+[    1605.235498] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.235498] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.245790] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.245790] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.245790] EV_ABS       ABS_MT_POSITION_X    00000250            
+[    1605.245790] EV_ABS       ABS_MT_POSITION_Y    00000275            
+[    1605.245790] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.245790] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.256107] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.256107] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.256107] EV_ABS       ABS_MT_POSITION_X    0000022a            
+[    1605.256107] EV_ABS       ABS_MT_POSITION_Y    00000346            
+[    1605.256107] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.256107] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.266462] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.266462] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.266462] EV_ABS       ABS_MT_POSITION_X    00000211            
+[    1605.266462] EV_ABS       ABS_MT_POSITION_Y    00000413            
+[    1605.266462] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.266462] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.276811] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.276811] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.276811] EV_ABS       ABS_MT_POSITION_X    000001fb            
+[    1605.276811] EV_ABS       ABS_MT_POSITION_Y    000004d9            
+[    1605.276811] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.276811] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.287109] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.287109] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.287109] EV_ABS       ABS_MT_POSITION_X    000001f0            
+[    1605.287109] EV_ABS       ABS_MT_POSITION_Y    00000586            
+[    1605.287109] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.287109] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.297427] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.297427] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.297427] EV_ABS       ABS_MT_POSITION_X    000001ea            
+[    1605.297427] EV_ABS       ABS_MT_POSITION_Y    0000060b            
+[    1605.297427] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.297427] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.307782] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.307782] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.307782] EV_ABS       ABS_MT_POSITION_X    000001e6            
+[    1605.307782] EV_ABS       ABS_MT_POSITION_Y    00000662            
+[    1605.307782] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.307782] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.318130] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.318130] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.318130] EV_ABS       ABS_MT_POSITION_X    000001e3            
+[    1605.318130] EV_ABS       ABS_MT_POSITION_Y    0000068a            
+[    1605.318130] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.318130] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.328429] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.328429] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.328429] EV_ABS       ABS_MT_POSITION_X    000001e2            
+[    1605.328429] EV_ABS       ABS_MT_POSITION_Y    00000696            
+[    1605.328429] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.328429] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.338744] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.338744] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.338744] EV_ABS       ABS_MT_POSITION_X    000001e5            
+[    1605.338744] EV_ABS       ABS_MT_POSITION_Y    0000066b            
+[    1605.338744] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.338744] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.349092] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.349092] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.349092] EV_ABS       ABS_MT_POSITION_X    000001ea            
+[    1605.349092] EV_ABS       ABS_MT_POSITION_Y    000005f2            
+[    1605.349092] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.349092] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.359384] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.359384] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.359384] EV_ABS       ABS_MT_POSITION_X    000001f4            
+[    1605.359384] EV_ABS       ABS_MT_POSITION_Y    00000528            
+[    1605.359384] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.359384] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.369748] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.369748] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.369748] EV_ABS       ABS_MT_POSITION_X    00000207            
+[    1605.369748] EV_ABS       ABS_MT_POSITION_Y    0000042b            
+[    1605.369748] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.369748] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.380069] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.380069] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.380069] EV_ABS       ABS_MT_POSITION_X    00000224            
+[    1605.380069] EV_ABS       ABS_MT_POSITION_Y    00000323            
+[    1605.380069] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.380069] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.390379] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.390379] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.390379] EV_ABS       ABS_MT_POSITION_X    0000024c            
+[    1605.390379] EV_ABS       ABS_MT_POSITION_Y    00000222            
+[    1605.390379] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.390379] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.400721] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.400721] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.400721] EV_ABS       ABS_MT_POSITION_X    0000027b            
+[    1605.400721] EV_ABS       ABS_MT_POSITION_Y    0000014a            
+[    1605.400721] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.400721] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.410986] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.410986] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.410986] EV_ABS       ABS_MT_POSITION_X    000002a8            
+[    1605.410986] EV_ABS       ABS_MT_POSITION_Y    000000ac            
+[    1605.410986] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.410986] EV_SYN       SYN_REPORT           00000000             rate 97
+[    1605.421296] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.421296] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.421296] EV_ABS       ABS_MT_POSITION_X    000002cb            
+[    1605.421296] EV_ABS       ABS_MT_POSITION_Y    00000053            
+[    1605.421296] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.421296] EV_SYN       SYN_REPORT           00000000             rate 96
+[    1605.431244] EV_ABS       ABS_MT_TRACKING_ID   00000000            
+[    1605.431244] EV_ABS       ABS_MT_TOUCH_MAJOR   00000001            
+[    1605.431244] EV_ABS       ABS_MT_POSITION_X    000002e7            
+[    1605.431244] EV_ABS       ABS_MT_POSITION_Y    0000000d            
+[    1605.431244] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.431244] EV_SYN       SYN_REPORT           00000000             rate 100
+[    1605.441426] EV_KEY       BTN_TOUCH            UP                  
+[    1605.441426] EV_SYN       SYN_MT_REPORT        00000000            
+[    1605.441426] EV_SYN       SYN_REPORT           00000000             rate 98

@@ -1,0 +1,161 @@
+总结：
+
+顿太的TP的26ms的T0数据，是MTK RD那边测试看到的比较差的，MTK没有测过顿太的TP
+
+so文件有两个功能，一个是跟随性一个是抖动（地图看，或者settings list多的页面滑动）
+MTK是先保证抖动好的前提下尽可能提高跟随性
+
+跟随性有个甩尾现象，在折返运动的时候不会马上响应预判段，而是要追一段时间后才能超过报点值（时间不定）
+这是因为兼顾抖动，是为了改善抖动对跟随性有一定影响
+
+抖动和跟随性是互斥的两方面。抖动是因为报点不均匀造成的，人不会匀速滑动，有加速度的情况下报点不均匀普遍
+
+
+TP跟随性firmware可以调，上层只是在硬件无法满足的情况下做的缓冲，so文件对跟随性的提高10~20ms，对抖动的提高40%~50%
+
+X1+没有so文件，看settings抖动比较厉害
+
+down/up边缘报点率不准不会对so的算法造成影响
+
+
+
+
+1. getevent是否能看出TP好坏？
+  a. getevent出来的数据都是driver上报的，而且可能也不准。可以从driver中导出所有报点数据拉长坐标轴（坐标轴越细越好）
+	然后看画出的曲线是否是平滑的曲线，报点率越大曲线越细腻越平滑的说明是好TP
+  b. 根据PDF看T0,Tr时间是否达到要求，如果过长，说明响应性能不好，TP不好
+
+
+
+
+
+2. 报点率是否越高越好？100-120Hz
+  人肉眼可看出变化要500ms以上，所以像100Hz变到120Hz，多个10ms，20ms的，人肉眼感觉不到，意义不大
+
+
+
+
+3.disable filter的算出多少ms
+  tcl_tpper_info.docx
+
+
+
+
+a. P5：每个时间点大概的代码位置，上层部分有具体log查看吗？如果没有可以加吗？能否support确定
+	软件传输上的延迟：
+		通过motion event结构体中的时间戳和接收到motion event时的时间戳比较，自行APK实现。这部分算出来的时间是从哪开始？InputManager?
+		MTK 说过有一个画了三条线的APK，利用这个apk吗？有这个功能吗？
+
+INT：硬件中断，示波器只能看到HW和INT
+ISR:是一个一直运行的thread，driver注册中断号，thread监听对应寄存器有没有变，如果是touch的寄存器变了，就会发信号上去告诉driver中断号来了，driver执行中断处理函数
+DRV:中断处理函数第一句进去的时候可以埋log，会影响performance
+
+
+
+【疑问】：
+InputManager：EventHub:getEvent()
+APP：
+UI：
+通过motion event结构体中的时间戳和接收到motion event时的时间戳比较，自行APK实现。这部分算出来的时间是从哪开始？InputManager?
+MotionEvent中坐标点的时间点是什么位置的
+getevent中的坐标点的时间是那部分的？
+抖动的属性的含义偏向于抖动还是跟随性
+
+
+
+
+
+b. P6：大概介绍下实际情况的流程，底层部分
+  MTK觉得firmware可以调这个时间
+
+
+
+
+c. P7：Down： idle/green(what?!! 亮屏时长时间不操作，touch panel会进入绿色模式？)/active mode各是什么
+  测试的时候不用关系
+
+
+d. P8：第一个move event对应的点在哪？最后一次move event对应的点在哪？（代码）
+  参考：down之后第一个move的motionevent中的点的时间，up之前最后一个move的motionevent中的点的时间
+  正确：getevent中Down和Up中间的Move的第一次和最后一次时间差
+
+
+
+e. P8：机械手臂测试滑动总是大于80Hz，用什么看？“adb shell getevent”?
+  是的，测试时候应该将其他的event设备都关掉，防止getevent计算错误
+
+
+
+f. P8：抖动，Touch Raw data的加速度标准差怎么计算？
+  如果测试用到再查
+
+
+g. P9：上层的刷新率16ms(60Hz)怎么来的？VSYNC的频率？
+
+
+
+h. P13：dumpsys input是一瞬间的值，如何连续查看touch log中Y通过第一条线的时间t1？具体的log是否有实例？具体如何操作？
+	可否讲解整个操作过程？算出来的(T2-T1)是两帧之间的时间差吗？单位是什么？
+  dumpsys input打开Touchfilter的log，查看过线没有对应的log完全靠视频决定。看第一个move到最后一次move用getevent看，touchfilter的log用来当
+  问题发生时候看具体行为。具体值计算参考文档
+
+
+
+
+i. P15：”通过log中两次move事件的时间间隔确认在各个滑动速度下的Touch report rate是否都是70Hz“？？怎么查看？为什么是70Hz？跟报点率
+	有什么关系？如果有个别点跌到各位数是否有影响？
+  geteventlog中的rate值，不一定是70Hz
+
+
+
+
+j. P16： TouchTest APK能否share?该apk是干什么的？ view root和inputreader各处的log是在什么位置，代表什么状态？有源码吗？dumpsys input是
+	为了得到什么数据？
+
+
+
+
+k. P17: 加速度的计算有实例吗？
+
+
+
+
+m. P19: Touchfilter.so是在InputReader中还是Eventhub.cpp中，起什么作用？
+  Eventhub.cpp， 功能：跟随感，抖动
+
+
+
+
+n. P20: 对应文件都已经找不到了，flash3中在哪？
+
+  kernel的dts文件相当于给so文件提供底层一些参数配置上的支持，以便so文件能够更准确的正常运行
+
+
+
+
+
+o. P26: 1.1T，T是什么单位？STD是什么？
+【疑问】
+
+
+
+p. P27: 误差为1～2frame中的4.15 ms/frame是哪里来的？什么意思？
+ (1frame)1000/240=4ms
+
+
+q. P36: Touch firmware report 100Hz左右？用getevent可以查看？ V-sync rate 60Hz左右？ “stay the same with”是什么意思？两者一样？
+  Touch firmware report就是getevent中的rate，这个是说无论手滑动快慢，报点率不变
+
+
+
+
+播放器QuickTimePlayer看视频：
+
+Windows->第一个选项，可以看帧率（240）
+进度条右键可以选择查看帧率，看帧率（xxxF）
+
+
+
+
+
+
