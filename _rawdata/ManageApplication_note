@@ -1,0 +1,12 @@
+
+ManageApplication:
+
+Interaction:
+1. user touch FixedTabsView:(FixedTabsView:setOnClickListener) updateCurrentTab(mCurPos) --> buildPager/resume(mSorted)
+2. user swipe ViewPager:(FixedTabsView:OnPageChangeListener) updateCurrentTab(mCurPos) --> buildPager/resume(mSorted)
+3. user click toggle: (onToggleClick) --> pause/resume(mSorted)
+4. onResume: updateCurrentTab(mViewPager.getCurrentItem()) --> buildPager/resume(mSorted)
+5. onPause: pause()
+6. onDestroy: release()
+7. MENU(sort): rebuild(false/true, true)
+

@@ -11,6 +11,43 @@ tags:
     - Shell
 ---
 
+## **Process Sample**
+
+```java
+Process proc = Runtime.getRuntime().exec(ANonJava.exe@);
+InputStream in = proc.getInputStream();
+byte buff[] = new byte[1024];
+int cbRead;
+
+try {
+    while ((cbRead = in.read(buff)) != -1) {
+        // Use the output of the process...
+    }
+} catch (IOException e) {
+    // Insert code to handle exceptions that occur
+    // when reading the process output
+}
+
+// No more output was available from the process, so...
+
+// Ensure that the process completes
+try {
+    proc.waitFor();
+} catch (InterruptedException) {
+    // Handle exception that could occur when waiting
+    // for a spawned process to terminate
+}
+
+// Then examine the process exit code
+if (proc.exitValue() == 1) {
+    // Use the exit value...
+}
+```
+
+You can find more on this site: http://docs.rinet.ru/JWP/ch14.htm
+
+
+<br>
 ## How to use Asset resources
 
 If you want to use asset resources, you should copy it from assets directory to `/data/data/{your package name}/files` directory with openFileOutput() method at first, and then use Context.getFilesDir() method to get back resources.
@@ -54,3 +91,5 @@ public void copyFromAssets(String filename) {
     }
 }
 ```
+
+#
