@@ -4,10 +4,9 @@ title:      "How to analysis Android Performance"
 subtitle:   "Android Performance Topic"
 date:       2016-06-23
 author:     "Vivi CAO"
-header-img: "img/post-bg-analysis-perf.jpeg"
+header-img: "img/post-bg-analysis-perf.jpg"
 tags:
-    - Android
-    - Performance
+    - Android Performance
 ---
 
 > 本文系本作者原创，如有任何知识产权、版权问题或理论错误，还请指正。

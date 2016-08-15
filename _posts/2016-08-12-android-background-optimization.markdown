@@ -8,10 +8,9 @@ header-img: "img/post-bg-anroid-n-optimization.jpg"
 catalog:    true
 
 tags:
-    - Android N
+    - Android Performance
     - Memory
     - Battery
-    - optimization
 ---
 
 # 1 Battery Optimizations
@@ -62,7 +61,7 @@ Note: The orange bars are some kind of the background activity.
 
 <img src="/img/in-post/post-android-n-background/4.png" width="880" />
 
-* 
+*
   [2]. Instead of Marshmallow Doze status, the device is stationary, it’s on battery and screen off. But the amount of time hasn’t passed yet for Doze to trigger; only a few minutes have passed. At this point, this extended Doze, or `this lighter, gentler version of Doze will kick in`, the N-release. And you’ll see that same pattern of Doze and maintenance window. And at some point, the device will realize it has been stationary for quite some time, and it’s been stationary for the amount of time required for Doze to kick in. And then, at that point, just like it does in Marshmallow, the full set of Doze restrictions will kick in. `So at that point, applications will lose Wakelocks, their alarms will get deferred, and there’ll be no more GPS or Wi-Fi scans because the device has been stationary`.
 
 #### **App Standby**

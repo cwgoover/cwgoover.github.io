@@ -1,0 +1,102 @@
+---
+layout:     post
+title:      "Android Performance分析工具之 —— vmstat"
+subtitle:   "Linux Command for Android"
+date:       2016-08-14
+author:     "Vivi Cao"
+header-img: "img/post-bg-vmstats.jpg"
+
+tags:
+    - Linux
+    - Android Performance
+---
+
+## NAME
+
+
+
+
+
+## FIELD DESCRIPTION FOR VM MODE
+
+**Procs**
+
+```
+r: The number of processes waiting for run time.
+b: The number of processes in uninterruptible sleep.
+```
+
+**Memory**
+
+```
+swpd: the amount of virtual memory used.
+free: the amount of idle memory.
+buff: the amount of memory used as buffers.
+cache: the amount of memory used as cache.
+inact: the amount of inactive memory. (-a option)
+active: the amount of active memory. (-a option)
+```
+
+**Swap**
+
+```
+si: Amount of memory swapped in from disk (/s).
+so: Amount of memory swapped to disk (/s).
+```
+
+**IO**
+
+```
+bi: Blocks received from a block device (blocks/s).
+bo: Blocks sent to a block device (blocks/s).
+```
+
+**System**
+
+```
+in: The number of interrupts per second, including the clock.
+cs: The number of context switches per second.
+```
+
+**CPU**  These are percentages of total CPU time.
+
+```
+us: Time spent running non-kernel code. (user time, including nice time)
+sy: Time spent running kernel code. (system time)
+id: Time spent idle. Prior to Linux 2.5.41, this includes IO-wait time.
+wa: Time spent waiting for IO. Prior to Linux 2.5.41, included in idle.
+st: Time stolen from a virtual machine. Prior to Linux 2.6.11, unknown.
+```
+
+
+Tips:
+
+    r - 執行中或等待執行的程序數量
+    b - 未中斷的休眠中程序數量，例如等待 IO，或正在作 Swaping
+    swpd - 目前已使用的虛擬記憶(KB)
+    free - 目前尚未被使用的實體記憶體(KB)
+    buff - 目前在暫存區用於讀/寫操作的實體記憶體(KB)
+    cache - 目前對應程序位址空間的實體記憶體(KB)
+    si - 從 swap disk 讀取到 RAM(KB)
+    so - 從 RAM 寫入 swap disk(KB)
+    bi - 從檔案系統或 swap disk 讀取的分頁區塊
+    bo - 從 RAM 寫到 swap disk 的分頁區塊
+
+    CPU:
+    us - User 佔用 CPU %
+    sy - System 佔用 CPU %
+    id - Idle 閒置 CPU %
+    wa - 因為 I/O Waiting CPU %
+    st - 虛擬機佔用 CPU %  (kernel 2.6.1 以後才支援)
+
+結果分析
+
+    r 值若經常大於 1 甚至更大的數字，且 id 常小於 40%，表示 CPU 負荷過重。
+    當主程序正在運行時，有較少的 free 是好事，這表示 cache 使用更有效率，除非是有不斷的寫入 swap disk (so,bo)。
+    cache 值如果較大，且 bi 值小，表示檔案系統效率好。
+    如果 swapd 數值大於 0，但 si, so 都顯示 0，此時系統效能還是正常的。
+    如果 bi, bo 出現較大的數值，但 si, so 卻維持數值 0，表示系統 IO 負載過重，要檢查檔案系統或硬碟有無異常。
+    如果 bi, bo 與 si, so 同時呈現較大的數值，表示記憶體 swapping 頻繁，RAM 太小。
+    kswapd 程序服務是負責確保閒置的記憶體可被釋放，每次啟動掃描會嘗試釋放 32 個 pages，並且一直在重複這個程序，直到閒置記憶體的數值高於 pages_high(核心參數)。
+    pdflush 程序服務是將記憶體中的內容與檔案系統進行同步操作，確保記憶體資料寫到硬碟。
+    bi 或 bo 出現 0 的次數太過頻繁，除非系統處於閒置狀態，否則應該檢查 I/O 方面的硬體裝置，例如硬碟、storage、HBA 卡甚至是光纖線。
