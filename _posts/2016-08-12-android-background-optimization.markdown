@@ -49,9 +49,8 @@ When the device continues to be stationary, on battery with the screen off, the 
 
 <img src="/img/in-post/post-android-n-background/3.png" width="880" />
 
-```
-Note: The orange bars are some kind of the background activity.
-```
+> Note: The orange bars are some kind of the background activity.
+
 
 * **[N-release]**
 
@@ -80,8 +79,7 @@ As the part of Doze and App standby, we launched something called a high-priorit
 - For use cases requiring immediate notification to user
 - Normal FCM messages batched to maintenance window
 
-```
-Note:
+> Note:
  For the devices that don’t have Google Play services, Google actually ship Doze
 and App Standby disabled by default in AOSP. And they instruct device vendors in
 markets where Google Play Services is not available to work with their ecosystems to
@@ -89,9 +87,8 @@ identify an alternate cloud push messaging service. So we don’t have them enab
 and App Standby unless they have Google Play services, or some alternate cloud-based push
 messaging service.
 
-国内推送服务:小米推送，腾讯信鸽推送，百度推送，极光推送，友盟推送等。特点：免费，服务会被杀死，多个app共用一条
+> 国内推送服务:小米推送，腾讯信鸽推送，百度推送，极光推送，友盟推送等。特点：免费，服务会被杀死，多个app共用一条
 推送通道（共用即一个app推送服务被杀死，那么只要用户打开其他使用推送服务的app，其他app的推送也能接收到消息）
-```
 
 Of course, Android optimizes Doze and App Standby for some special use cases:
 
@@ -178,10 +175,8 @@ Because you’re using JobScheduler, system can optimize when that action takes 
 
 You get an instance of JobScheduler service, create a builder object, and specify constraints on the network type and the periodicity, and add a trigger for a Content Uri update for NEW_PICTURE. And last you can schedule your job now.
 
-```
-Note: More information you can get in the Android Developers website：
-https://developer.android.com/preview/features/background-optimization.html;
-```
+> Note: More information you can get in the Android Developers website：
+> https://developer.android.com/preview/features/background-optimization.html;
 <br>
 
 # 3 APIs & Diagnostic tools
@@ -226,9 +221,7 @@ Let’s walk through the workflow of how this tool works.
 
 <img src="/img/in-post/post-android-n-background/23.png" width="880" />
 
-```
-Note: You can get this tool from github: github.com/google/battery-historian.
-```
+> Note: You can get this tool from github: github.com/google/battery-historian.
 
 It is an open source tool available on GitHub ready for everybody to download. You can install it to your computer. Now you have your development device for the stats to be recent, because you want to have a good starting point, `you can either charge the device up to 100% when the stats would get reset, or there is ADB command to actually manually reset the stats so you have a good initiation point`. You can run your experience, it might last a few minutes, or maybe a couple of hours. And at the end of it, you take a bug report. And then, you upload that **bug report** on your computer that you have the Battery Historian tool.
 

@@ -1,8 +1,6 @@
 #Hux Blog
 
-###[View Live Hux Blog &rarr;](http://huxpro.github.io)
-
-![](http://huangxuan.me/img/blog-desktop.jpg)
+###[View Live Cwgoover Blog &rarr;](http://cwgoover.github.io)
 
 
 ### "Page Build Warning" email
@@ -111,6 +109,7 @@ $ git clone git@github.com:Huxpro/huxblog-boilerplate.git
 	* [Customization](#customization)
 	* [Header Image](#header-image)
 	* [SEO Title](#seo-title)
+	* [Page Build Warning](#page-build-warning)
 
 #### Environment
 
@@ -300,8 +299,3 @@ Before V1.4, site setting `title` is not only used for displayed in Home Page an
 It's possible that you want the two things different. For me, my site-title is **“Hux Blog”** but I want the title shows in search engine is **“黄玄的博客 | Hux Blog”** which is multi-language.
 
 So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` different from `title`, and it would be only used to generate HTML `<title>` and setting DuoShuo Sharing.
-
-## Thanks
-
-This theme is forked from [IronSummitMedia/startbootstrap-clean-blog-jekyll](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)  
-Thanks Jekyll and Github Pages!
