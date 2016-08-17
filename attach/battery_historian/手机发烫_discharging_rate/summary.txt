@@ -1,0 +1,11 @@
+1. 从提供的main log， event log和top信息中没有发现异常应用行为。（该版本GMS没有关闭）
+
+log中指示电池温度的log：
+08-08 17:50:09.051033  1283  1283 D ChargingWarning: onCheckWarning:status = 2 , temperature = 400 , plugged = true
+
+2. wifi一直连接，CPU一直running和充电行为会导致手机温度升高，这是正常行为。
+
+3. 从附件中提供的Battery Historian中的数据可以发现，手机从 5.27pm到5.47pm之间充电率一直保持在60%/hour左右，致使电池温度上升到
+40度，后充电率快速下降到0，手机电池温度恢复到38度。说明电池温度的升高主要是由于手机充电引起的，由高充电率导致。
+
+综上，该种现象是正常情况，是手机由高充电率导致。

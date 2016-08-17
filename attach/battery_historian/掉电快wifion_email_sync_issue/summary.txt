@@ -1,0 +1,17 @@
+从截图可以看出从19：07到02：09 wifi状态打开的时候后台进行大量sync操作，CPU执行消耗电量，电量从100%-93%
+从02：09到 10：00 wifi disconnect，而radio连接网络，此时radio和sync操作消耗电量，从93%-86%
+
+整个过程，wifi on状态14h53m，radio on状态5h24m，其中前台应用主要有：
+com.tencent.mm 大约消耗电量比例：2.02%
+com.sankuai.meituan.takeoutnew  大约消耗电量比例：1.38%
+
+后台sync操作：
+ com.tct.email 大约消耗电量比例：11.1%
+ com.sina.weibo.account  大约消耗电量比例：1.36%
+
+其中，com.tct.email sync时长4h11m，执行862次 
+
+综上所述，待机耗电大是因为：
+1. 手机wifi和radio同时打开导致应用频繁进行sync操作，尤其是com.tct.email应用
+2.  com.tencent.mm和com.sankuai.meituan.takeoutnew一直作为前台应用获取wakelock执行操作
+3. 手机没有打开Doze模式，导致CPU并没有长时间的休眠

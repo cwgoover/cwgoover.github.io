@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Android Performance分析工具之 —— vmstat"
-subtitle:   "Linux Command for Android"
+subtitle:   "vmstat —— Linux measurement"
 date:       2016-08-14
 author:     "Vivi Cao"
 header-img: "img/post-bg-vmstats.jpg"
@@ -11,92 +11,270 @@ tags:
     - Android Performance
 ---
 
-## NAME
+## vmstat使用
+---
 
+**vmstat: virtual Memory Statistics (虚拟内存统计)**, 是一个很有价值的监控工具，可以实时提供memory、block IO和CPU状态信息。它用来对系统整体的情况进行统计，通过它可以快速了解当前系统运行情况及可能碰到的问题。
 
+Android中vmstat的提取命令如下：
 
+* Example: `vmstat 1 3`
+  - 1 -> 每1秒重新测量并反馈数据，1代表的是每一秒。
+  - 3 -> 反馈3次后关闭程序，3代表反馈的次数，3次。
 
-
-## FIELD DESCRIPTION FOR VM MODE
-
-**Procs**
-
-```
-r: The number of processes waiting for run time.
-b: The number of processes in uninterruptible sleep.
-```
-
-**Memory**
+* Report:
 
 ```
-swpd: the amount of virtual memory used.
-free: the amount of idle memory.
-buff: the amount of memory used as buffers.
-cache: the amount of memory used as cache.
-inact: the amount of inactive memory. (-a option)
-active: the amount of active memory. (-a option)
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 0  0      0  57080  50060 1429612   0    0   712    67    0  237 10  6 83  0
+ 0  0      0  57064  50060 1429612   0    0     0     0    0  181  0  0 100 0
+ 0  0      0  57064  50060 1429612   0    0     0     0    0  100  0  0 100 0
 ```
 
-**Swap**
+**report中第一行的数据是手机上次开机到现在的平均值，剩下的所有行代表的是当前状态值.**
+
+<br>
+
+### **单项解析**
+
+#### **Procs**
+
+**`r:`** (running) 运行队列中的进程数，即多少个进程分配到了CPU. 这个值超过了CPU的个数就会出现CPU的瓶颈了.
+
+**`b:`** (blocked) 被阻塞的进程数(in uninterruptible sleep)，通常是进程等待IO操作.
+
+
+#### **Memory** (kB)
+
+**`swpd:`** 使用的虚拟内存大小. 如果大于0，表示手机物理内存不足. 如果不是应用内存泄漏的原因，就是当前后台执行的activity, jobs过多了.
+
+**`free:`** 系统可用的物理内存数. 如上例中手机还有57M左右的空闲内存.
+
+**`buff:`** 系统用作buffers的内存数，用来存储比如目录中内容，权限等的缓存. 上例中使用了50M左右.
+
+**`cache:`** 系统用作cache的内存数，用来记忆打开的文件或者图片等，起缓冲作用. 相当于把空闲的一部分内存拿来做cache提高程序执行性能. 上例使用了1.4G左右.
+
+#### **Swap**
+
+**`si:`** 每秒从磁盘(disk)读入的内存大小(/s). 如果这个值大于0，表示物理内存不足或者内存泄漏，需要查找耗内存的进程。
+
+**`so:`** 每秒从内存写入磁盘的内存大小(/s). 同上
+
+#### **IO**
+
+**`bi:`** 块设备接收的块数量，单位blocks/s. 指手机上所有的Rom和其他块设备，代表IO操作，如果进行大量拷贝动作等该值会非0.
+
+**`bo:`** 块设备每秒发送的块数量，单位blocks/s. 例如读取文件，bo就会大于0. 一般bi和bo都要接近0，否则表示IO过于频繁，需要调整。
+
+#### **System**
+
+**`in:`** (interrupts) 在delay的时间内（默认为1秒）系统产生的终端数，包括时间中断.
+
+**`cs:`** (context switch) 在delay的时间内（默认为1秒）系统上下文切换的次数. 例如进程切换，要进行上下文切换；线程的切换，要进行上下文切；，代码执行进入内核空间，上下文也要切换。这个值越小越好，太大了要考虑降低线程或者进程数目。因为上下文切换很耗资源，次数过多表示CPU大部分浪费在上下文切换而不是执行程序内容，CPU没有充分利用。
+
+#### **CPU**
+
+**`us:`** 用户(non-kernel code)占用的CPU时间比 %
+
+**`sy:`** 系统时间(kernel code)占用的CPU时间比 %， 如果太高，表示系统调用时间过长，例如IO操作频繁.
+
+**`id:`** Idle 闲置CPU时间比 %, 一般来说，id + us + sy = 100%
+
+**`wa:`** (IO wait) CPU等待IO完成的时间占比 %.
+
+#### **Tips:**
+
+1. 如果r值经常大于1或者更大，并且id常小于40%，说明CPU负荷过重。
+2. 当手机正常使用时，有较小的free是好事，说明cache使用更有效率, 除非此时有不断的写入swap，disk (so, bo). cache值如果偏大，且bi值小，表示data存于cache中不必块读取，使用效率高。
+3. 如果swapd值大于0，而si，so都显示0，此时系统性能还是正常的。
+4. 如果bi，bo出现较大值，而si，so却维持在0值，表示系统IO负载过重，要查看IO处理或者Rom是否有异常。
+5. 如果bi，bo和si，so同时为较大数值，表示内存swapping频繁，RAM太小。
+6. bi或bo出现0的次数太过频繁，除非是系统处于闲置状态，否则需要查看I/O方面是否出现问题
+7. 进程kswapd是负责确保闲置内存可被释放，每次启动扫描会尝试释放32个pages，并且一直在重复这个程序直到限制内存数值高于pages_high（核心参数）
+
+<br>
+
+## Examples
+---
+
+https://www.thomas-krenn.com/en/wiki/Linux_Performance_Measurements_using_vmstat
+http://anguschen.myasustor.com:8080/wordpress/?p=38
+http://www.tutorialspoint.com/unix_commands/vmstat.htm
+http://jashliao.pixnet.net/blog/post/163268336-%E6%AF%8F%E5%A4%A9%E4%B8%80%E5%80%8Blinux%E6%8C%87%E4%BB%A4--vmstat%E6%8C%87%E4%BB%A4%28%E9%87%9D%E5%B0%8D%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E7%9A%84
+http://www.ha97.com/4512.html
+
+### CPU User Load Example
+
+基准状态：
 
 ```
-si: Amount of memory swapped in from disk (/s).
-so: Amount of memory swapped to disk (/s).
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 0  0      0  72516  64824 1374296   0    0   294    33    0   95  1  1 98  0
+ 0  0      0  72392  64824 1374296   0    0     0     0    0  112  0  0 100 0
+ 1  0      0  72392  64824 1374300   0    0     0     0    0  201  0  0 100 0
+ 0  0      0  72392  64824 1374300   0    0     0     0    0  129  0  0 100 0
+ 0  0      0  72392  64824 1374300   0    0     0    64    0  342  0  0 100 0
 ```
+CPU System Load Example
 
-**IO**
+重负荷执行命令：
 
-```
-bi: Blocks received from a block device (blocks/s).
-bo: Blocks sent to a block device (blocks/s).
-```
-
-**System**
-
-```
-in: The number of interrupts per second, including the clock.
-cs: The number of context switches per second.
-```
-
-**CPU**  These are percentages of total CPU time.
+adb shell dd if=/dev/urandom of=/sdcard/500MBfile count=500000
 
 ```
-us: Time spent running non-kernel code. (user time, including nice time)
-sy: Time spent running kernel code. (system time)
-id: Time spent idle. Prior to Linux 2.5.41, this includes IO-wait time.
-wa: Time spent waiting for IO. Prior to Linux 2.5.41, included in idle.
-st: Time stolen from a virtual machine. Prior to Linux 2.6.11, unknown.
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 4  0      0  36320   2876 364788    0    0   465    46    0  133  3  2 96  0
+ 6  0      0  46360   2872 365712    0    0 20784 18992    0 13837 18 37 44 1
+ 5  1      0  41356   2892 368356    0    0    48 70560    0 10856 0  0 100 0
+ 2  0      0  34212   2900 372424    0    0     0   272    0 16424 0  0  0  0
+ 2  3      0  34320   2872 367452    0    0   464   272    0 12823 0  0 100 0
 ```
 
+调用shell命令执行IO操作
 
-Tips:
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 1  0      0  56860  63900 1383844   0    0   293    33    0   95  1  1 98  0
+ 2  0      0  56080  63908 1383972   0    0     0    48    0 2126 13  8 79  0
+ 1  0      0  56080  63908 1383984   0    0     0  1104    0 1705 12  7 81  0
+ 1  0      0  55140  63908 1384000   0    0     0     0    0 1382 13  7 80  0
+ 1  0      0  61756  63916 1384188   0    0   768   416    1 1443 11  9 80  0
+```
 
-    r - 執行中或等待執行的程序數量
-    b - 未中斷的休眠中程序數量，例如等待 IO，或正在作 Swaping
-    swpd - 目前已使用的虛擬記憶(KB)
-    free - 目前尚未被使用的實體記憶體(KB)
-    buff - 目前在暫存區用於讀/寫操作的實體記憶體(KB)
-    cache - 目前對應程序位址空間的實體記憶體(KB)
-    si - 從 swap disk 讀取到 RAM(KB)
-    so - 從 RAM 寫入 swap disk(KB)
-    bi - 從檔案系統或 swap disk 讀取的分頁區塊
-    bo - 從 RAM 寫到 swap disk 的分頁區塊
+播放在线视频
 
-    CPU:
-    us - User 佔用 CPU %
-    sy - System 佔用 CPU %
-    id - Idle 閒置 CPU %
-    wa - 因為 I/O Waiting CPU %
-    st - 虛擬機佔用 CPU %  (kernel 2.6.1 以後才支援)
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 0  0      0  57016  56396 1313228   0    0   293    33    0   96  2  1 97  0
+ 0  0      0  55328  56452 1313592   0    0     0  2128    1 7316 11  8 80  0
+ 0  0      0  54956  56452 1313836   0    0     0     0    0 5293  4  4 93  0
+ 0  0      0  54988  56452 1313996   0    0     0     0    0 5133  3  3 94  0
+ 3  0      0  53216  56468 1314096   0    0     0  3632    0 6303  6  5 88  1
+```
 
-結果分析
+网络下载
 
-    r 值若經常大於 1 甚至更大的數字，且 id 常小於 40%，表示 CPU 負荷過重。
-    當主程序正在運行時，有較少的 free 是好事，這表示 cache 使用更有效率，除非是有不斷的寫入 swap disk (so,bo)。
-    cache 值如果較大，且 bi 值小，表示檔案系統效率好。
-    如果 swapd 數值大於 0，但 si, so 都顯示 0，此時系統效能還是正常的。
-    如果 bi, bo 出現較大的數值，但 si, so 卻維持數值 0，表示系統 IO 負載過重，要檢查檔案系統或硬碟有無異常。
-    如果 bi, bo 與 si, so 同時呈現較大的數值，表示記憶體 swapping 頻繁，RAM 太小。
-    kswapd 程序服務是負責確保閒置的記憶體可被釋放，每次啟動掃描會嘗試釋放 32 個 pages，並且一直在重複這個程序，直到閒置記憶體的數值高於 pages_high(核心參數)。
-    pdflush 程序服務是將記憶體中的內容與檔案系統進行同步操作，確保記憶體資料寫到硬碟。
-    bi 或 bo 出現 0 的次數太過頻繁，除非系統處於閒置狀態，否則應該檢查 I/O 方面的硬體裝置，例如硬碟、storage、HBA 卡甚至是光纖線。
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 0  0      0  75688  55400 1237092   0    0   292    33    0   99  1  1 98  0
+ 0  0      0  75532  55408 1237132   0    0     0   288    0 1062  0  0 100 0
+ 0  0      0  74312  55408 1237224   0    0     0     0    0 1096  1  1 98  0
+ 0  0      0  74188  55408 1237192   0    0     0     0    0  570  0  1 99  0
+ 0  0      0  73496  55408 1237144   0    0     0     0    0 1183  1  4 94  0
+```
+
+重负荷时下载
+
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 5  0      0  44460   4036 391580    0    0   449    43    0  126  2  1 96  0
+ 2  0      0  40992   4044 392272    0    0  4112   224    0 3388 18  4 77  0
+ 2  0      0  36820   3824 389824    0    0 74368   896    1 8387 24 14 59  3
+ 2  0      0  34276   3832 389792    0    0     0  2832    0 3797 20  5 75  0
+ 5  0      0  36264   3768 385788    0    0 15856     0    0 3744 20  7 73  0
+```
+
+打开多个应用
+
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+23  2      0  36676   5100 459584    0    0   395    40    0  116  2  1 96  0
+27  5      0  34748   5416 455932    0    0 139440 7168    1 12811 62 38 0  0
+20  3      0  33908   5520 464280    0    0 240032 5744    1 16300 70 30 0  0
+ 7  8      0  34988   5360 454076    0    0 111696 9136    1 12001 68 30 1  1
+ 2 10      0  35744   4472 453188    0    0 86608 33520    0 8314  0  0 100 0
+```
+
+应用加载(重负荷)
+
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 3  0      0  40692   3396 358808    0    0   426    41    0  120  2  1 97  0
+ 1  0      0  38700   3396 359100    0    0     0     0    0 3792 22  6 72  0
+ 1  0      0  38320   3396 359060    0    0     0     0    1 3806 21  7 72  0
+ 2  0      0  36172   3404 359228    0    0     0   208    1 4951 21  5 74  0
+ 3  0      0  35920   3404 359328    0    0     0  1440    0 4287 20  5 75  0
+
+爱奇艺
+ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 5  0      0 149800   4664 407056    0    0   443    42    0  124  2  1 96  0
+ 1  0      0 144304   4696 411820    0    0 21552   720    0 5729 26  8 63  2
+ 4  0      0 158324   4696 411900    0    0     0     0    0 3330 18  4 78  0
+ 3  0      0 163568   4704 412036    0    0     0   272    1 2892 16  5 79  0
+ 3  0      0 188256   4712 412048    0    0     0    48    0 2808 18  3 78  0
+
+```
+
+重负荷下应用扫描sdcard
+
+```
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 8  0      0  36244  20136 360800    0    0   517    51    0  142  4  2 94  0
+19  4      0  36744  19904 354672    0    0 18032   400    0 8509  0  0 100 0
+14  0      0  38004  19912 357240    0    0 21696   704    0 7252  0  0 100 0
+ 5  0      0  61652  19476 356324    0    0  7472   320    0 7538  0  0  0  0
+ 7  0      0  64084  20292 356680    0    0  5792   256    0 11859 0  0 100 0
+ ```
+
+ 重负荷sdcard下copy文件(low memory)
+
+ ```
+ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 3  2      0  35380   6388 478248    0    0   523    53    0  144  3  2 95  0
+ 1  3      0  35564   6128 498504    0    0 154800   48    0 6432 22 17 37 25
+ 7  3      0  35308   6312 498076    0    0 31984   448    0 3678 22  9 43 27
+ 1  4      0  36536   6632 493988    0    0 23280 99136    0 3391 19  7 47 27
+ 1  3      0  37368   7140 486268    0    0 45632    16    0 4607 19  7 53 20
+ ```
+
+High IO Read Load Example
+
+ 重负荷下执行命令
+
+~$ adb shell dd if=/sdcard/Movies/back.mp4 of=/dev/null  count=5000000
+
+ ```
+ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 2  1      0  34932  17456 374784    0    0   581    60    0  148  3  2 95  0
+ 2  0      0  36240  11924 379944    0    0 497664  160    0 10685 21 20 49 10
+ 2  2      0  33876  11924 383456    0    0 502272    0    0 10569 21 19 49 10
+ 2  0      0  37168  11924 380212    0    0 80336     0    0 2396 16  5 77  2
+ 1  0      0  37092  11924 380624    0    0  1024     0    0  764 15  2 83  0
+ ```
+
+ 重负荷下玩神庙逃亡
+
+ ```
+ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 3  0      0  49556   4896 382592    0    0   641    62    0  157  3  2 95  0
+ 1  0      0  51628   4896 382620    0    0     0     0    0 6480 27  7 66  0
+ 6  2      0  34836   5100 397580    0    0 75184   304    0 9519  0  0  0  0
+ 5  0      0  34904   4896 395656    0    0 72912   688    0 9172  0  0 100 0
+ 5  0      0  37900   4896 391528    0    0  1616   896    0 5282 30 10 59  0
+ ```
+
+ 重负荷下看本地视频
+
+ ```
+ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 4  0      0  60684   4564 444688    0    0   636    62    0  155  3  2 95  0
+ 4  0      0  60292   4564 444760    0    0     0  4032    1 8606 35 10 55  0
+ 8  0      0  35252   4572 446272    0    0  7056   272    0 9923 38 22 41  0
+ 3  0      0  33776   4572 446552    0    0  1008     0    0 8063 28  8 64  0
+ 2  0      0  37472   4580 445044    0    0    16   208    0 7543 25  7 69  0
+ ```
