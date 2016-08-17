@@ -278,3 +278,7 @@ High IO Read Load Example
  3  0      0  33776   4572 446552    0    0  1008     0    0 8063 28  8 64  0
  2  0      0  37472   4580 445044    0    0    16   208    0 7543 25  7 69  0
  ```
+
+ 查看手机电池温度为39.5度
+
+ cat /sys/class/power_supply/battery/temp
