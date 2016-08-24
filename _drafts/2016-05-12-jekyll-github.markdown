@@ -10,6 +10,18 @@ tags:
     - github
 ---
 
+### Search Function
+
+[Submit Your Website to Google, Bing, Yahoo!, Baidu, Yandex](http://www.problogtricks.com/18/how-to-submit-site-to-search-engines.html)
+
+[Using Github Pages for Blogging](bruceeckel.github.io/2014/11/19/using-github-pages/)
+[Get your content on Google](https://support.google.com/webmasters/answer/6259634)
+[sidebar.xml](https://github.com/BruceEckel/BruceEckel.github.io/blob/master/_includes/sidebar.html)
+
+[How to Submit Your Site to Baidu?](http://www.webnots.com/submit-site-to-baidu/)
+
+If you have a master branch then it could just be that Google hasn't gotten to you yet. You can try [submitting your URL](https://www.google.com/webmasters/tools/submit-url) which might speed things up.
+
 ### 集成第三方服务
 
 #### 多说评论
