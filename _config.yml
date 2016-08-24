@@ -5,7 +5,7 @@ header-img: img/home-bg.jpeg
 email: cdlie2m122@163.com
 description: "做一个有想法的搬运工 | 草婷，Android engineer，Programmer | 这里是 @草脏脏 的个人博客，与你分享我的真实世界。"
 keyword: "草脏脏, vv草脏脏, ViVi, cwgoover, applecao520, @applecao520, 草脏脏的博客, ViVi Blog, 博客, 个人网站, Android, Java, Python, Linux, Art"
-url: "http://cwgoover.ho"              # your host, for absolute URL
+url: "https://cwgoover.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -26,18 +26,16 @@ github_username:    草脏脏
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 paginate: 10
+paginate_path: "page:num"
+
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
-
-
 
 # Markdown settings
 # replace redcarpet to kramdown,
