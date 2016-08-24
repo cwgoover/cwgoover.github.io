@@ -49,10 +49,11 @@ kramdown:
 
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
+disqus_username: cwgoover
 
-# TODO: need to register???
 # Duoshuo settings
-duoshuo_username: viviblog
+# TODO: change webname in http://cwgoover.duoshuo.com/admin/settings/
+duoshuo_username: cwgoover
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
