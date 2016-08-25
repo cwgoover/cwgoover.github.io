@@ -231,7 +231,7 @@ Since the contents of a blockquote are block-level elements, you can nest blockq
 
   ↑↑↑↑
 
-
+箭头表示：&rarr;
 
 Hux 的 Blog 就这么开通了。
 

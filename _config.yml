@@ -3,7 +3,7 @@ title: ViVi CAO's Blog
 SEOTitle: 草脏脏的博客 | ViVi Blog
 header-img: img/home-bg.jpeg
 email: cdlie2m122@163.com
-description: "做一个有想法的搬运工 | 草婷，Android engineer，Programmer | 这里是 @草脏脏 的个人博客，与你分享我的真实世界。"
+description: "做一个有设计感的搬运工 | 草婷，Android engineer，Programmer | 这里是 @草脏脏 的个人博客，与你分享我的真实世界。"
 keyword: "草脏脏, vv草脏脏, ViVi, cwgoover, applecao520, @applecao520, 草脏脏的博客, ViVi Blog, 博客, 个人网站, Android, Java, Python, Linux, Art"
 url: "https://cwgoover.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -63,10 +63,10 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # TODO: need to change
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+#ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: cwgoover.ho
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: cwgoover.com
 
 
 
