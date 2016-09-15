@@ -10,16 +10,15 @@ baseurl: ""                             # for example, '/blog' if your blog host
 
 
 
-# TODO: need to check real account
 # SNS settings
-RSS: false
-#weibo_username:     草脏脏
-zhihu_username:     cao-zang-zang
-# stack_username:  [check]
-github_username:    cwgoover
+RSS: true
 #twitter_username:  applecao520
+zhihu_username:     cao-zang-zang
+#weibo_username:     gityuan
 #facebook_username:  applecao520
+github_username:    cwgoover
 # linkedin_username:  firstname-lastname-idxxxx
+# stack_username:  [check]
 
 
 
