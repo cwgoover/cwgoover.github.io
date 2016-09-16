@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      "Android Input Jitter Issues"
-subtitle:   "Summary"
+title:      "Android Touch System"
+subtitle:   "Mastering the Android Touch System"
 date:       2016-08-27
 author:     "Vivi CAO"
 header-img: "img/post-bg-input-jitter.jpg"
 tags:
     - Android
-    - Input
+    - Touch
 ---
 
 ## Mastering the Android Touch system
