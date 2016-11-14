@@ -90,7 +90,7 @@ Joystick游戏杆的pointer坐标使用joystick axes的绝对位置。其值被�
 
 <img src="/img/in-post/post-android-pointer-location/view_path_1.png" width="300" />
 
-1. 有压力反馈的时候会有一个圆圈包裹手指触摸区域，代表了当前点的压力和接触面，圈的颜色随着压力值的变化而变化
+* 有压力反馈的时候会有一个圆圈包裹手指触摸区域，代表了当前点的压力和接触面，圈的颜色随着压力值的变化而变化
 
 ```java
 if (mCurDown && ps.mCurDown) {
@@ -101,10 +101,9 @@ if (mCurDown && ps.mCurDown) {
 }
 ```
 
-2. 像蚯蚓一样带有红色或者亮蓝色原点的蓝色曲线就是手指滑动的运动轨迹，这些点都是底层报上来的数据被封装在MotionEvent类中，通过调用该类的getPointerCoords(index, coords)得到当前触摸点的坐标——红色原点，调用该类的getHistoricalPointerCoords(index, historyPos, coords)得到历史触摸点的坐标——亮蓝色原点。最后用蓝色线将每个原点连接在一起就形成了如图所示的红蓝曲线
+* 像蚯蚓一样带有红色或者亮蓝色原点的蓝色曲线就是手指滑动的运动轨迹，这些点都是底层报上来的数据被封装在MotionEvent类中，通过调用该类的getPointerCoords(index, coords)得到当前触摸点的坐标——红色原点，调用该类的getHistoricalPointerCoords(index, historyPos, coords)得到历史触摸点的坐标——亮蓝色原点。最后用蓝色线将每个原点连接在一起就形成了如图所示的红蓝曲线
 
-
-
+<img src="/img/in-post/post-android-pointer-location/view_path_2.png" width="300" />
 
 关于历史触摸点即earlier movement samples，涉及到了MotionEvent的batching机制，原文解释如下：
 
@@ -189,7 +188,7 @@ for (int p = 0; p < NP; p++) {
 
 其实每个touch事件来的时候，MotionEvent只携带了本次事件中所有pointers信息，就算里面含有“historical”点也是跟上一次MotionEvent中的点不一样的。而每次屏幕刷新都需要将所有点重绘，并不像肉眼看到的只是多画出手指滑动的那些点。所以PointerLocationView类定义了一个内部类PointerState专门用来保存每个pointer的所有信息，包括它的previous trace，然后在onDraw()方法中只需要循环画出每个pointer对应的PointerState对象中的trace信息就行了。关于PointerState类，下一节将详细讲解。
 
-3. 手指滑动的过程中，当前手指所在的位置都会有一个蓝色的十字交叉线代表当前位置，反映了滑动轨迹中的最后一个点的坐标，涉及到的代码如下：
+* 手指滑动的过程中，当前手指所在的位置都会有一个蓝色的十字交叉线代表当前位置，反映了滑动轨迹中的最后一个点的坐标，涉及到的代码如下：
 
 ```java
 if (mCurDown && ps.mCurDown) {
@@ -200,7 +199,7 @@ if (mCurDown && ps.mCurDown) {
 }
 ```
 
-4. 可以发现最后一个点也就是当前触摸点颜色并不是红色或者亮蓝色，而是在不断变换的。它是用户当前触摸位置，而颜色是根据用户触摸的压力值而变化的。代码如下：
+* 可以发现最后一个点也就是当前触摸点颜色并不是红色或者亮蓝色，而是在不断变换的。它是用户当前触摸位置，而颜色是根据用户触摸的压力值而变化的。代码如下：
 
 ```java
 if (mCurDown && ps.mCurDown) {
@@ -211,7 +210,7 @@ if (mCurDown && ps.mCurDown) {
 }
 ```
 
-5. 十字星中垂直方向的绿色线是orienttation arrow。它是根据当前触摸点坐标的orientation属性和toolMajor属性的计算的。因为我们使用的是手指，所以画的是half circle orientation，也就是上图中的绿线。对应代码如下：
+* 十字星中垂直方向的绿色线是orienttation arrow。它是根据当前触摸点坐标的orientation属性和toolMajor属性的计算的。因为我们使用的是手指，所以画的是half circle orientation，也就是上图中的绿线。对应代码如下：
 
 ```java
 if (mCurDown && ps.mCurDown) {
@@ -248,11 +247,9 @@ if (mCurDown && ps.mCurDown) {
 
 现在来介绍**当滑动结束后的轨迹显示**。当我们停止滑动，也就是将所有手指抬起后，十字星线，当前点的动态颜色表示，代表当前点的压力和接触面的圆圈和orientation arrow都会消失，只留下了如下图所示的运动轨迹和上面提到的红线和紫线。右图是放大红线和蓝线的图示，下面我要着重分析这两条线：
 
-<img src="/img/in-post/post-android-pointer-location/view_path_3_1.png" width="200" />
-<img src="/img/in-post/post-android-pointer-location/view_path_3_2.png" width="200" />
+<img src="/img/in-post/post-android-pointer-location/view_path_3.png" width="500" />
 
-
-6. 代表手势运动的速度向量——红线。对于调用MotionEvent的getPointerCoords(index, coords)方法得到的当前触摸点，会通过VelocityTracker类对象计算出每一个点的X，Y轴的速度getXVelocity(id)，getYVelocity(id)。而在onDraw方法中会在最后一个点（当前触摸点）上画出该点的速度向量。相关的代码如下：
+* 代表手势运动的速度向量——红线。对于调用MotionEvent的getPointerCoords(index, coords)方法得到的当前触摸点，会通过VelocityTracker类对象计算出每一个点的X，Y轴的速度getXVelocity(id)，getYVelocity(id)。而在onDraw方法中会在最后一个点（当前触摸点）上画出该点的速度向量。相关的代码如下：
 
 >**读取触摸点速度向量的代码：**
 
@@ -278,7 +275,7 @@ if (drawn) {
 }
 ```
 
-7. 模拟手指的运动轨迹——紫线。仍然是针对getPointerCoords(index, coords)方法得到的当前触摸点，通过VelocityTracker类对象得到它的内部类对象VelocityTracker.Estimator，然后完全用该对象通过算法模拟出对应点的一系列未来走向。该曲线可用来评估实体TP报点的精准性，如果蓝线和紫线靠的越近，可以推断TP反应越好，反之亦然
+* 模拟手指的运动轨迹——紫线。仍然是针对getPointerCoords(index, coords)方法得到的当前触摸点，通过VelocityTracker类对象得到它的内部类对象VelocityTracker.Estimator，然后完全用该对象通过算法模拟出对应点的一系列未来走向。该曲线可用来评估实体TP报点的精准性，如果蓝线和紫线靠的越近，可以推断TP反应越好，反之亦然
 
 >**得到VelocityTracker.Estimator类对象的代码：**
 
@@ -306,8 +303,7 @@ if (drawn) {
 
 下图是Press固定为1.0，size为0.01时手指滑动和滑动结束后的两张对比图，可以看出滑动结束后只剩下接触点和蓝线的痕迹。
 
-<img src="/img/in-post/post-android-pointer-location/view_path_4_1.png" width="260" />
-<img src="/img/in-post/post-android-pointer-location/view_path_4_2.png" width="260" />
+<img src="/img/in-post/post-android-pointer-location/view_path_4.png" width="600" />
 
 ---
 
@@ -400,9 +396,6 @@ InputDeviceListener接口是用来监听输入设备变化的，比如有新的�
 
 所以该类中的变量涵盖了画图或者log中需要的所有信息，其中mTraceX/mTraceY就是一个pointer划过所有点的X/Y坐标集合，它是通过方法addTrace()添加的。每个点是否是当前点而不是historical点是用mTraceCurrent变量保存的。如果当前MotionEvent中属于这个PointerState的action是个ACTION_DOWN或者ACTION_POINTER_DOWN，则mCurDown为true。还有一些其他的信息比如该Pointer的当前点速度向量，坐标等如下表所列：
 
-
-以上所有的变量都是针对一个Pointer的。即每个pointer对应一个PointerState对象，比如用三个手指在屏幕上滑动就会有三个对应的PointerState对象记录每个手指在屏幕上的滑动状态。但是对于整个滑动事件，比如当前是否是按压状态；当前在屏幕上的手指数；整个手势过程中在屏幕上按压的最大手指数，这些状态都被在PointerLocationView中的变量记录着。下表就列出了关键的几个属性：
-
 |**Value**    |**Description**
 |**mTraceX/mTraceY (float[])**  |The X/Y coordinates of all the points for one pointer trace
 |**mTraceCurrent (boolean[])**    |Whether the every point is current point; false means historical sample.
@@ -420,7 +413,7 @@ InputDeviceListener接口是用来监听输入设备变化的，比如有新的�
 |**mCurNumPointers (int)**    |The number of the current pointers for this gesture
 |**mMaxNumPointers (int)**    |The maxium number of the pointers for this gesture
 |**mActivePointerId (int)**   |The active pointer’s index
-|**mPointers (Arraylist<PointeState>)** |All the pointers’ PointerState for this gesture
+|**mPointers (Arraylist\<PointeState\>)** |All the pointers’ PointerState for this gesture
 
 其中需要说明的是，一个多点触摸的手势中只有一个手指是active pointer，大多数情况下都是第一个接触屏幕的手指。如果抬起这根手指，那么对应的active pointer会发生变化:
 
@@ -463,7 +456,7 @@ public void addTrace(float x, float y, boolean current) {
     mTraceY[mTraceCount] = y;
     mTraceCurrent[mTraceCount] = current;
     mTraceCount += 1;
-}
+  }
 }
 ```
 

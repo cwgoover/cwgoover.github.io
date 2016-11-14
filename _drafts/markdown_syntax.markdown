@@ -231,9 +231,7 @@ Since the contents of a blockquote are block-level elements, you can nest blockq
 
   ↑↑↑↑
 
-
-
-Hux 的 Blog 就这么开通了。
+箭头表示：&rarr;
 
 [跳过废话，直接看技术实现 ](#build)
 
@@ -327,13 +325,4 @@ XNU, the acronym(首字母缩写) for ***X is Not Unix***, which is the **Comput
 
 本文译自 [iOS 9, Safari and the Web: 3D Touch, new Responsive Web Design, Native integration and HTML5 APIs --- Breaking the Mobile Web](http://www.mobilexweb.com/blog/ios9-safari-for-web-developers)   
 译者 [黄玄](http://weibo.com/huxpro)，首次发布于 [Hux Blog](http://huangxuan.me)，转载请保留以上链接
-
-
-
 ---
-
-*本篇完。*
-
-> 本文作者系前「阿里旅行 · 去啊」前端实习生，本文系业余时间学习之作。
-> 如有任何知识产权、版权问题或理论错误，还请指正。
-> 转载请注明原作者及以上信息。
