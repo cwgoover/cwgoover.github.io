@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Android AlarmManager Workflow"
+title:      "Android Alarm Manager Workflow"
 subtitle:   "Describe the detail implement of the AlarmManagerService"
 date:       2016-07-12
 author:     "Vivi Cao"

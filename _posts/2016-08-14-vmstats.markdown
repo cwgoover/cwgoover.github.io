@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Android Performance分析工具之 —— vmstat"
-subtitle:   "vmstat —— Linux measurement"
+title:      "Android性能分析工具之 —— vmstat"
+subtitle:   "vmstat —— Android measurement"
 date:       2016-08-14
 author:     "Vivi Cao"
 header-img: "img/post-bg-vmstats.jpg"
